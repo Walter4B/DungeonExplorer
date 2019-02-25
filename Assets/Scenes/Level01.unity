@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -137,6 +138,18 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7591f67a6bc914cab88a078b30ce79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1381441630}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -200,7 +213,7 @@ GameObject:
   - component: {fileID: 875869680}
   - component: {fileID: 875869682}
   - component: {fileID: 875869681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,8 +265,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1221305499
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -1914,6 +1927,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &948768283
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50790844385174846, guid: bff0fd36a49b1e143a6b76594a83fa1b,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50790844385174846, guid: bff0fd36a49b1e143a6b76594a83fa1b,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114100324571290876, guid: bff0fd36a49b1e143a6b76594a83fa1b,
+        type: 2}
+      propertyPath: Speed
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1261998521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,7 +1994,7 @@ GameObject:
   - component: {fileID: 1261998522}
   - component: {fileID: 1261998524}
   - component: {fileID: 1261998523}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tilemap_Characters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2032,7 +2102,7 @@ GameObject:
   - component: {fileID: 1372535393}
   - component: {fileID: 1372535395}
   - component: {fileID: 1372535394}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tilemap_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2084,8 +2154,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -668814659
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3401,6 +3471,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1381441630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1966524534435562, guid: bff0fd36a49b1e143a6b76594a83fa1b,
+    type: 2}
+  m_PrefabInternal: {fileID: 948768283}
 --- !u!1 &1545987656
 GameObject:
   m_ObjectHideFlags: 0
