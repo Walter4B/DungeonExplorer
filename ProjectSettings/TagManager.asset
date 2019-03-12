@@ -20,7 +20,7 @@ TagManager:
   - WallsTop
   - Hole
   - HoleWalls
-  - 
+  - CrossHair
   - 
   - 
   - 
@@ -61,4 +61,7 @@ TagManager:
     locked: 0
   - name: WallsTop
     uniqueID: 1528078775
+    locked: 0
+  - name: CrossHair
+    uniqueID: 3515499769
     locked: 0
