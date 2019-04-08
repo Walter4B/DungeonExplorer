@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private void MoveCrossHair()
     {
         Cursor.visible = false;
-        Vector3 mousePosition = Input.mousePosition;
+        Vector2 mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
         Vector2 direction = new Vector2(mousePosition.x, mousePosition.y);

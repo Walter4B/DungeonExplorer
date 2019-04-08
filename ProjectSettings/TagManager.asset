@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Projectile
+  - Enemy
+  - FiringPoint
+  - Wall
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -50,11 +55,11 @@ TagManager:
   - name: Floors
     uniqueID: 3073661797
     locked: 0
-  - name: Characters
-    uniqueID: 203473297
-    locked: 0
   - name: Items
     uniqueID: 1169769555
+    locked: 0
+  - name: Characters
+    uniqueID: 203473297
     locked: 0
   - name: Walls
     uniqueID: 3626152637
