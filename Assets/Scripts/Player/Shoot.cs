@@ -9,13 +9,16 @@ public class Shoot : MonoBehaviour
     public Transform FiringPoint;
 
     public float Power = 10.0f;
+    public float SwingPower = 1.0f;
 
     private GameObject _projectileParent;
+    private GameObject _swingParent;
 
     void Awake()
     {
         GameObject.Find("PauseCanvas").GetComponent<PauseMenu>();
         _projectileParent = new GameObject("ProjectileParent");
+        _swingParent = new GameObject("SwingParent");
 
     }
 
@@ -45,7 +48,7 @@ public class Shoot : MonoBehaviour
 
     void Swing()
     {
-        GameObject swingClone = Instantiate(SwingPrefab, FiringPoint.position, Quaternion.identity);
+        GameObject swingClone = Instantiate(SwingPrefab, FiringPoint.position, Quaternion.identity, _swingParent.transform);
         Rigidbody2D projectileRigidbody = swingClone.GetComponent<Rigidbody2D>();
     }
 }
