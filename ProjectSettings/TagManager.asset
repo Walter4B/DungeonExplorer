@@ -9,6 +9,7 @@ TagManager:
   - FiringPoint
   - Wall
   - Weapon
+  - HoleTag
   layers:
   - Default
   - TransparentFX
