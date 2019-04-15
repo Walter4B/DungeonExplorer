@@ -7,6 +7,7 @@ public class FollowPlayer : MonoBehaviour
 {
     public float speed;
     public float stoppingDistance;
+    public float SearchDistance;
 
     private Transform target;
 
@@ -17,9 +18,12 @@ public class FollowPlayer : MonoBehaviour
 
     private void Update()
     {
-        if(Vector2.Distance(transform.position, target.position) > stoppingDistance)
+        if (Vector2.Distance(transform.position, target.position) < SearchDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            }
         }
     }
 }
