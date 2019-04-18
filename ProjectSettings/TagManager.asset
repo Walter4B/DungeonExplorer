@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Projectile
+  - Enemy
+  - FiringPoint
+  - Wall
+  - Weapon
+  - HoleTag
   layers:
   - Default
   - TransparentFX
@@ -20,7 +26,7 @@ TagManager:
   - WallsTop
   - Hole
   - HoleWalls
-  - 
+  - CrossHair
   - 
   - 
   - 
@@ -50,15 +56,18 @@ TagManager:
   - name: Floors
     uniqueID: 3073661797
     locked: 0
-  - name: Characters
-    uniqueID: 203473297
-    locked: 0
   - name: Items
     uniqueID: 1169769555
+    locked: 0
+  - name: Characters
+    uniqueID: 203473297
     locked: 0
   - name: Walls
     uniqueID: 3626152637
     locked: 0
   - name: WallsTop
     uniqueID: 1528078775
+    locked: 0
+  - name: CrossHair
+    uniqueID: 3515499769
     locked: 0
