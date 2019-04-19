@@ -10,7 +10,6 @@ public class Hole : MonoBehaviour {
         if(other.tag == "HoleTag")
         {
             Debug.Log("enter");
-            SceneManager.LoadScene(1);
         }
     }
 }

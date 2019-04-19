@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Shoot : MonoBehaviour
 {
     public GameObject ProjectilePrefab;
     public GameObject SwingPrefab;
     public Transform FiringPoint;
+
+    public int ActiveScene;
+    public int ThisScene;
 
     public float Power = 10.0f;
     public float SwingPower = 1.0f;
@@ -16,15 +20,13 @@ public class Shoot : MonoBehaviour
 
     void Awake()
     {
-        GameObject.Find("PauseCanvas").GetComponent<PauseMenu>();
-        _projectileParent = new GameObject("ProjectileParent");
-        _swingParent = new GameObject("SwingParent");
+        ParentInstantiate();
 
     }
 
     void Update()
     {
-
+        ThisScene = SceneManager.GetActiveScene().buildIndex;
 
         if (!PauseMenu.GameIsPaused)
         {
@@ -36,6 +38,10 @@ public class Shoot : MonoBehaviour
             {
                 Shooting();
             }
+        }
+        if(ActiveScene != ThisScene)
+        {
+            ParentInstantiate();
         }
     }
     
@@ -50,5 +56,13 @@ public class Shoot : MonoBehaviour
     {
         GameObject swingClone = Instantiate(SwingPrefab, FiringPoint.position, Quaternion.identity, _swingParent.transform);
         Rigidbody2D projectileRigidbody = swingClone.GetComponent<Rigidbody2D>();
+    }
+
+    void ParentInstantiate()
+    {
+        ActiveScene = SceneManager.GetActiveScene().buildIndex;
+        GameObject.Find("PauseCanvas").GetComponent<PauseMenu>();
+        _projectileParent = new GameObject("ProjectileParent");
+        _swingParent = new GameObject("SwingParent");
     }
 }
