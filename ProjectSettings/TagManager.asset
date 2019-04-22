@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Weapon
   - HoleTag
+  - Chest
+  - ChestLayer
   layers:
   - Default
   - TransparentFX
