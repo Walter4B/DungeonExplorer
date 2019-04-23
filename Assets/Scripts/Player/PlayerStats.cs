@@ -24,6 +24,8 @@ public class PlayerStats : MonoBehaviour
 
     public bool CanTakeDamage = true;
 
+    public GameObject UICanvas;
+
     private int currentHealth;
     private int currentMana;
     private int ActiveScene;
@@ -45,6 +47,7 @@ public class PlayerStats : MonoBehaviour
         if(currentHealth <= 0)
         {
             SceneManager.LoadScene(1);
+            Destroy(UICanvas);
             Destroy(gameObject);
         }
 

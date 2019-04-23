@@ -16,6 +16,8 @@ public class Shoot : MonoBehaviour
     public float Power = 10.0f;
     public float SwingPower = 1.0f;
 
+    private bool Attacking = false;
+
     private GameObject _projectileParent;
     private GameObject _swingParent;
 
@@ -27,17 +29,22 @@ public class Shoot : MonoBehaviour
     void FixedUpdate()
     {
         ThisScene = SceneManager.GetActiveScene().buildIndex;
-
         if (!PauseMenu.GameIsPaused)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && !Attacking)
             {
                 Swing();
+                Attacking = true;
+                Invoke("SetBoolBack", 1);
             }
-            if (Input.GetButtonDown("Fire2"))
+
+            if (Input.GetButtonDown("Fire2") && !Attacking)
             {
                 Shooting();
+                Attacking = true;
+                Invoke("SetBoolBack", 1);
             }
+
         }
         if(ActiveScene != ThisScene)
         {
@@ -66,5 +73,11 @@ public class Shoot : MonoBehaviour
         GameObject.Find("PauseCanvas").GetComponent<PauseMenu>();
         _projectileParent = new GameObject("ProjectileParent");
         _swingParent = new GameObject("SwingParent");
+    }
+
+
+    private void SetBoolBack()
+    {
+        Attacking = false;
     }
 }
