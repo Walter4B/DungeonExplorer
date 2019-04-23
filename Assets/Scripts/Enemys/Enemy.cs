@@ -27,7 +27,11 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        isColliding = false;
+
+        if (isColliding)
+        {
+            Invoke("SetBoolBack", 1);
+        }
     }
    
     void OnTriggerEnter2D(Collider2D other)
@@ -48,16 +52,22 @@ public class Enemy : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            if(isColliding)
+            if (isColliding)
             {
                 return;
             }
-            isColliding = true;
-            player.GetComponent<PlayerStats>().TakeDamage(10);
-            player.GetComponent<PlayerStats>().CanTakeDamage = false;
-
+            else
+            {
+                isColliding = true;
+                player.GetComponent<PlayerStats>().TakeDamage(10);
+                player.GetComponent<PlayerStats>().CanTakeDamage = false;
+            }
             //if (ExplosionPrefab)
                 //Instantiate(ExplosionPrefab, transform.position, transform.rotation);
         }
+    }
+    private void SetBoolBack()
+    {
+        isColliding = false;
     }
 }
