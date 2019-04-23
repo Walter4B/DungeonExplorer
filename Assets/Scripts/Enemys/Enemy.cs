@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
 
     public Transform EnemyFiringPoint;
 
+    private bool isAttacking = false;
     private bool isColliding = false;
 
     private GameObject player;
@@ -28,9 +29,11 @@ public class Enemy : MonoBehaviour
     //public ParticleSystem ExplosionPrefab;
     private void FixedUpdate()
     {
-        if(Vector2.Distance(transform.position, target.position) < SearchDistance)
+        if(Vector2.Distance(transform.position, target.position) < SearchDistance && !isAttacking)
         {
             Shoot();
+            isAttacking = true;
+            Invoke("SetBoolBackAttack", 1);
         }
 
         if (Health <= 0)
@@ -40,7 +43,7 @@ public class Enemy : MonoBehaviour
 
         if (isColliding)
         {
-            Invoke("SetBoolBack", 1);
+            Invoke("SetBoolBackCollide", 1);
         }
     }
    
@@ -76,10 +79,6 @@ public class Enemy : MonoBehaviour
                 //Instantiate(ExplosionPrefab, transform.position, transform.rotation);
         }
     }
-    private void SetBoolBack()
-    {
-        isColliding = false;
-    }
 
     private void Shoot()
     {
@@ -87,5 +86,14 @@ public class Enemy : MonoBehaviour
         Rigidbody2D projectileRigidBody = projectileColne.GetComponent<Rigidbody2D>();
         projectileRigidBody.AddForce(EnemyFiringPoint.forward * Power, ForceMode2D.Force);
     }
-     
+
+    private void SetBoolBackCollide()
+    {
+        isColliding = false;
+    }
+
+    private void SetBoolBackAttack()
+    {
+        isAttacking = false;
+    }
 }
