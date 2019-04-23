@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class EnemyFireBall : MonoBehaviour
 {
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Wall")
@@ -12,6 +19,7 @@ public class EnemyFireBall : MonoBehaviour
         }
         if (other.tag == "Player")
         {
+            player.GetComponent<PlayerStats>().TakeDamage(7);
             Destroy(gameObject);
         }
     }

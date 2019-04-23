@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
         {
             Shoot();
             isAttacking = true;
-            Invoke("SetBoolBackAttack", 1);
+            Invoke("SetBoolBackAttack", 2);
         }
 
         if (Health <= 0)
