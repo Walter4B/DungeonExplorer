@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject EnemyProjectilePrefab;
+
     public int Health = 50;
 
+    public float Power = 2;
     public float SearchDistance;
+
+    public Transform EnemyFireingPoint;
 
     private bool isColliding = false;
 
@@ -23,6 +28,13 @@ public class Enemy : MonoBehaviour
     //public ParticleSystem ExplosionPrefab;
     private void FixedUpdate()
     {
+        if(Vector2.Distance(transform.position, target.position) < SearchDistance)
+        {
+            GameObject projectileColne = Instantiate(EnemyProjectilePrefab, EnemyFireingPoint.position, Quaternion.identity);
+            Rigidbody2D projectileRigidBody = projectileColne.GetComponent<Rigidbody2D>();
+            projectileRigidBody.AddForce(EnemyFireingPoint.forward * Power, ForceMode2D.Force);
+        }
+
         if (Health <= 0)
         {
             Destroy(gameObject);

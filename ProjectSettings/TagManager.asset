@@ -11,6 +11,7 @@ TagManager:
   - Weapon
   - HoleTag
   - UIStats
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

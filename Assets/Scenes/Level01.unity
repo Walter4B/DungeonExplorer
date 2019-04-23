@@ -268,16 +268,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 106628096}
   m_CullTransparentMesh: 0
---- !u!1 &126688304 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1373336925864014, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1334703728}
---- !u!58 &126688306 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 58421914174558914, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1334703728}
 --- !u!1001 &142651375
 Prefab:
   m_ObjectHideFlags: 0
@@ -11318,35 +11308,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114147261658025772, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
         type: 2}
-      propertyPath: damage
-      value: 
-      objectReference: {fileID: 1381441637}
-    - target: {fileID: 58421914174558914, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: SearchDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114147261658025772, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
         type: 2}
-      propertyPath: FiringPoint
+      propertyPath: EnemyProjectilePrefab
       value: 
-      objectReference: {fileID: 126688304}
-    - target: {fileID: 114147261658025772, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
+      objectReference: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
         type: 2}
-      propertyPath: ProjectilePrefab
-      value: 
-      objectReference: {fileID: 1300212148095512, guid: 3873165cf84096b4ea0b6430d9cfdb5a,
-        type: 2}
-    - target: {fileID: 114147261658025772, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
-        type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 2125767057}
-    - target: {fileID: 114147261658025772, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
-        type: 2}
-      propertyPath: Collider
-      value: 
-      objectReference: {fileID: 126688306}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a83c8ea2a598bce41bf3b7096b6ca90b, type: 2}
   m_IsPrefabAsset: 0
@@ -17493,11 +17463,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!4 &2125767057 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4128159392129926, guid: bff0fd36a49b1e143a6b76594a83fa1b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1029524777}
 --- !u!1 &2144336512
 GameObject:
   m_ObjectHideFlags: 0

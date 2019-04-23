@@ -32,6 +32,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1459785669618706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4837851621895798}
+  m_Layer: 9
+  m_Name: EnemyFireingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4763576597197272
 Transform:
   m_ObjectHideFlags: 1
@@ -41,8 +56,22 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 28.149998, y: -0.01840949, z: -0.057617188}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4837851621895798}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4837851621895798
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459785669618706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4763576597197272}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50903627769831666
@@ -106,8 +135,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d63985010742d84fb478aa01e5d3867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: {fileID: 0}
+  EnemyProjectilePrefab: {fileID: 0}
   Health: 50
+  Power: 2
+  SearchDistance: 0
+  EnemyFireingPoint: {fileID: 4837851621895798}
 --- !u!114 &114553526952490600
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -16,7 +16,7 @@ public class FollowPlayer : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Vector2.Distance(transform.position, target.position) < SearchDistance)
         {
