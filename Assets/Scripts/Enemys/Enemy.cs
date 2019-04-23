@@ -5,16 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    public PlayerStats damage;
     public int Health = 50;
 
+    public float SearchDistance;
+
+    private bool isColliding = false;
+
+    private GameObject player;
+    private Transform target;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
     //public ParticleSystem ExplosionPrefab;
-    private void Update()
+    private void FixedUpdate()
     {
         if (Health <= 0)
         {
             Destroy(gameObject);
         }
+        isColliding = false;
     }
    
     void OnTriggerEnter2D(Collider2D other)
@@ -35,9 +48,13 @@ public class Enemy : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            GameObject dmg = GameObject.FindGameObjectWithTag("Player");
-            damage = dmg.GetComponent<PlayerStats>();
-            damage.Health -= 10;
+            if(isColliding)
+            {
+                return;
+            }
+            isColliding = true;
+            player.GetComponent<PlayerStats>().TakeDamage(10);
+            player.GetComponent<PlayerStats>().CanTakeDamage = false;
 
             //if (ExplosionPrefab)
                 //Instantiate(ExplosionPrefab, transform.position, transform.rotation);

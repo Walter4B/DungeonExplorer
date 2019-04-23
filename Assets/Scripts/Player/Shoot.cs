@@ -8,6 +8,7 @@ public class Shoot : MonoBehaviour
     public GameObject ProjectilePrefab;
     public GameObject SwingPrefab;
     public Transform FiringPoint;
+    public Transform TargetCrossHair;
 
     public int ActiveScene;
     public int ThisScene;
@@ -21,10 +22,9 @@ public class Shoot : MonoBehaviour
     void Awake()
     {
         ParentInstantiate();
-
     }
 
-    void Update()
+    void FixedUpdate()
     {
         ThisScene = SceneManager.GetActiveScene().buildIndex;
 
@@ -55,6 +55,8 @@ public class Shoot : MonoBehaviour
     void Swing()
     {
         GameObject swingClone = Instantiate(SwingPrefab, FiringPoint.position, Quaternion.identity, _swingParent.transform);
+        swingClone.transform.SetParent(FiringPoint);
+        swingClone.transform.rotation = Quaternion.identity;
         Rigidbody2D projectileRigidbody = swingClone.GetComponent<Rigidbody2D>();
     }
 

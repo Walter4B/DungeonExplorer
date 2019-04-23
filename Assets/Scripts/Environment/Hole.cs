@@ -9,7 +9,7 @@ public class Hole : MonoBehaviour {
     {
         if(other.tag == "HoleTag")
         {
-            Debug.Log("enter");
+            Debug.Log("Hole");
         }
     }
 }
