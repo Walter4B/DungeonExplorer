@@ -12,6 +12,8 @@ TagManager:
   - HoleTag
   - UIStats
   - EnemyProjectile
+  - ChestLayer
+  - Chest
   layers:
   - Default
   - TransparentFX
