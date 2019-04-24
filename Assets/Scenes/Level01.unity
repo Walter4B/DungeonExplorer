@@ -3070,6 +3070,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0616f9ec4280164eb8a1fcc1ad79f4b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &670664527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4837851621895798, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1334703728}
 --- !u!114 &690359206 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114464983250346534, guid: f846f6ae71a0ca049927d2e842fbedca,
@@ -11282,6 +11287,10 @@ Prefab:
       propertyPath: UICanvas
       value: 
       objectReference: {fileID: 798699288}
+    - target: {fileID: 1412890191876588, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+      propertyPath: m_Name
+      value: FiringPoint
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
   m_IsPrefabAsset: 0
@@ -11528,6 +11537,20 @@ Prefab:
       value: 
       objectReference: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
         type: 2}
+    - target: {fileID: 1459785669618706, guid: a83c8ea2a598bce41bf3b7096b6ca90b, type: 2}
+      propertyPath: m_Name
+      value: EnemyFiringPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 114147261658025772, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
+        type: 2}
+      propertyPath: EnemyFiringPoint
+      value: 
+      objectReference: {fileID: 670664527}
+    - target: {fileID: 114147261658025772, guid: a83c8ea2a598bce41bf3b7096b6ca90b,
+        type: 2}
+      propertyPath: Power
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a83c8ea2a598bce41bf3b7096b6ca90b, type: 2}
   m_IsPrefabAsset: 0

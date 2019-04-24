@@ -10,10 +10,11 @@ public class Enemy : MonoBehaviour
     public int Health = 50;
 
     public float Power = 2;
-    public float SearchDistance;
+    public float SearchDistance = 20;
 
-    public Transform EnemyFireingPoint;
+    public Transform EnemyFiringPoint;
 
+    private bool isAttacking = false;
     private bool isColliding = false;
 
     private GameObject player;
@@ -28,11 +29,11 @@ public class Enemy : MonoBehaviour
     //public ParticleSystem ExplosionPrefab;
     private void FixedUpdate()
     {
-        if(Vector2.Distance(transform.position, target.position) < SearchDistance)
+        if(Vector2.Distance(transform.position, target.position) < SearchDistance && !isAttacking)
         {
-            GameObject projectileColne = Instantiate(EnemyProjectilePrefab, EnemyFireingPoint.position, Quaternion.identity);
-            Rigidbody2D projectileRigidBody = projectileColne.GetComponent<Rigidbody2D>();
-            projectileRigidBody.AddForce(EnemyFireingPoint.forward * Power, ForceMode2D.Force);
+            Shoot();
+            isAttacking = true;
+            Invoke("SetBoolBackAttack", 2);
         }
 
         if (Health <= 0)
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour
 
         if (isColliding)
         {
-            Invoke("SetBoolBack", 1);
+            Invoke("SetBoolBackCollide", 1);
         }
     }
    
@@ -78,8 +79,21 @@ public class Enemy : MonoBehaviour
                 //Instantiate(ExplosionPrefab, transform.position, transform.rotation);
         }
     }
-    private void SetBoolBack()
+
+    private void Shoot()
+    {
+        GameObject projectileColne = Instantiate(EnemyProjectilePrefab, EnemyFiringPoint.position, Quaternion.identity);
+        Rigidbody2D projectileRigidBody = projectileColne.GetComponent<Rigidbody2D>();
+        projectileRigidBody.AddForce(EnemyFiringPoint.forward * Power, ForceMode2D.Force);
+    }
+
+    private void SetBoolBackCollide()
     {
         isColliding = false;
+    }
+
+    private void SetBoolBackAttack()
+    {
+        isAttacking = false;
     }
 }
