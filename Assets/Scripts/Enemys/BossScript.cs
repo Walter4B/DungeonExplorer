@@ -36,10 +36,7 @@ public class BossScript : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            GameObject dmg = GameObject.FindGameObjectWithTag("Player");
-            damage = dmg.GetComponent<PlayerStats>();
-            damage.Health -= 10;
-
+            other.gameObject.GetComponent<PlayerStats>().TakeDamage(10);
             //if (ExplosionPrefab)
             //Instantiate(ExplosionPrefab, transform.position, transform.rotation);
         }

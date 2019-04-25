@@ -14,6 +14,7 @@ TagManager:
   - EnemyProjectile
   - ChestLayer
   - Chest
+  - CharacterInventory
   layers:
   - Default
   - TransparentFX

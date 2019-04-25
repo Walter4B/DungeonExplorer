@@ -11,6 +11,8 @@ public class CommanChest : MonoBehaviour
     private GameObject chestPanel;
     [SerializeField]
     private Transform Player;
+    [SerializeField]
+    private GameObject characterPanel;
 
     private readonly float radius = 2.5f;
     private float distance;
@@ -61,6 +63,11 @@ public class CommanChest : MonoBehaviour
 
             if (hitCollider != null && hitCollider.CompareTag("Chest"))
             {
+                if (!copyPanel.activeSelf)
+                {
+                    characterPanel.SetActive(true);
+                }
+
                 return Clickable.ChestClicked;
             }
             else

@@ -2634,6 +2634,11 @@ Prefab:
       propertyPath: chestPanel
       value: 
       objectReference: {fileID: 1608452158}
+    - target: {fileID: 114279460910755318, guid: aac062b3f1ec2f04b8dc381d8f8dd609,
+        type: 2}
+      propertyPath: characterPanel
+      value: 
+      objectReference: {fileID: 786188582}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac062b3f1ec2f04b8dc381d8f8dd609, type: 2}
   m_IsPrefabAsset: 0
@@ -2970,6 +2975,45 @@ Prefab:
     - target: {fileID: 1449545944391392, guid: b2a4e594f654fa147812e5e29215edb9, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224351103535344282, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 170.12161
+      objectReference: {fileID: 0}
+    - target: {fileID: 224792655069098358, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 54.999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 224511003120492274, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 93.81833
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005142166246154, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -48.190002
+      objectReference: {fileID: 0}
+    - target: {fileID: 224438457151156660, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -108.95997
+      objectReference: {fileID: 0}
+    - target: {fileID: 224842162708343232, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -64.084984
+      objectReference: {fileID: 0}
+    - target: {fileID: 224563502742559794, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -153.83496
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946168914552724, guid: b2a4e594f654fa147812e5e29215edb9, type: 2}
+      propertyPath: m_TagString
+      value: CharacterInventory
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a4e594f654fa147812e5e29215edb9, type: 2}
@@ -16630,6 +16674,11 @@ Prefab:
       propertyPath: chestPanel
       value: 
       objectReference: {fileID: 1608452158}
+    - target: {fileID: 114279460910755318, guid: aac062b3f1ec2f04b8dc381d8f8dd609,
+        type: 2}
+      propertyPath: characterPanel
+      value: 
+      objectReference: {fileID: 786188582}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac062b3f1ec2f04b8dc381d8f8dd609, type: 2}
   m_IsPrefabAsset: 0
