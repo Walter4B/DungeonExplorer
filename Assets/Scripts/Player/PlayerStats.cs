@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class PlayerStats : MonoBehaviour
 {
     public int Health = 100;
     public int Mana = 100;
-    public int Armor = 1;
+    public int Armor = 0;
     public int HealthPotions = 0;
     public int ManaPotions = 0;
 
@@ -28,22 +29,26 @@ public class PlayerStats : MonoBehaviour
 
     private int currentHealth;
     private int currentMana;
-    private int ActiveScene;
+    private int activeScene;
 
-    private void Start()
+    private InventoryPanel inventory;
+
+    private void Awake()
     {
         currentHealth = Health;
         currentMana = Mana;
         HealthBar.value = Health;
         ManaBar.value = Mana;
+        inventory = gameObject.GetComponent<InventoryPanel>();
+    }
+
+    private void Start()
+    {
+        PlayerMana.text = currentMana + "/" + Mana;
     }
 
     private void Update()
     {
-        PlayerHealth.text = currentHealth + "/" + Health;
-        PlayerMana.text = currentMana + "/" + Mana;
-        PlayerArmor.text = Armor.ToString();
-
         if(currentHealth <= 0)
         {
             SceneManager.LoadScene(1);
@@ -63,13 +68,76 @@ public class PlayerStats : MonoBehaviour
         if (CanTakeDamage)
         {
             CanTakeDamage = false;
-            currentHealth -= damage;
-            HealthBar.value = currentHealth;
+            currentHealth -= GetDamage(damage);
+
+            inventory.UpdateStats();
+
+            PlayerArmor.text = Armor.ToString();
+            UpdatePlayerHealth();
         }
     }
 
     IEnumerator DamageTimer()
     {
         yield return new WaitForSeconds(2);
+    }
+
+    public void UpdatePlayerHealth(int healthToAdd = 0)
+    {
+        currentHealth += healthToAdd;
+        HealthBar.value = currentHealth;
+        PlayerHealth.text = currentHealth + "/" + Health;
+    }
+
+    private int GetDamage(int damage)
+    {
+        if (Armor == 0)
+        {
+            return damage;
+        }
+
+        var armourPieces = inventory.GetItemsFromSlots();
+        //u ovom ifu se gleda jel je damage veci ili jednak od ukupnog armora
+        if (damage >= Armor)
+        {
+            //ako je, onda postavi količinsku vrijednost na svakom armour piecu na 0
+            foreach (var armour in armourPieces)
+            {
+                if (armour != null)
+                {
+                    armour.ArmourValue = 0;
+                }
+            }
+
+            //vrati razliku damage-a i ukupnog armoura da se oduzme od healtha
+            return damage - Armor;
+        }
+
+        var rnd = new System.Random();
+        var armourValue = 0;
+        var index = 0;
+
+        do
+        {
+            index = rnd.Next(armourPieces.Count);
+
+            if (armourPieces.ElementAt(index) != null)
+            {
+                armourValue = armourPieces.ElementAt(index).ArmourValue;
+
+                if (damage > armourValue)
+                {
+                    armourPieces.ElementAt(index).ArmourValue = 0;
+                }
+                else
+                {
+                    armourPieces.ElementAt(index).ArmourValue -= damage;
+                }
+
+                damage -= armourValue;
+            }
+        } while (damage > 0);
+
+        return damage;
     }
 }

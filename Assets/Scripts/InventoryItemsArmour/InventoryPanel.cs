@@ -8,9 +8,10 @@ public class InventoryPanel : MonoBehaviour
     [SerializeField]
     private GameObject PlayerInventory;
     private StatsValues statsValues;
+
+    [SerializeField]
     private MyInventorySlot[] slots;
 
-    private List<ArmourPiece> pieces = null;
     private List<string> stats = null;
 
     private void Awake()
@@ -29,24 +30,20 @@ public class InventoryPanel : MonoBehaviour
         }
     }
 
-    private void GenerateItems()
+    public List<ArmourPiece> GetItemsFromSlots()
     {
-        pieces = new List<ArmourPiece>();
-        foreach (var item in slots)
-        {
-            pieces.Add(item.GetArmourPiece());
-        }
+        return slots.Select(slot => slot.GetArmourPiece()).ToList();
     }
 
-    private void UpdateStats()
+    public void UpdateStats()
     {
-        GenerateItems();
         stats = new List<string>
         {
-            pieces.Where(piece => piece != null).Sum(piece => piece.ArmourValue).ToString(),
-            pieces.Where(piece => piece != null).Sum(piece => piece.Stamina).ToString(),
-            pieces.Where(piece => piece != null).Sum(piece => piece.Strength).ToString(),
-            pieces.Where(piece => piece != null).Sum(piece => piece.Intellect).ToString()
+            slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.ArmourValue).ToString(),
+
+            (slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.Stamina) + 10).ToString(),
+            slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.Strength).ToString(),
+            slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.Intellect).ToString()
         };
 
         statsValues.UpdateStats(stats);

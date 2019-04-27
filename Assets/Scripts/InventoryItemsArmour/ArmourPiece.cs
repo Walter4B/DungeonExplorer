@@ -6,7 +6,7 @@ public class ArmourPiece : ScriptableObject
     new public string name = "New item";
     public Sprite icon = null;
 
-    public int ArmourValue { private set; get; }
+    public int ArmourValue;
     public Armour.PossibleArmourSlots ArmourSlot { private set; get; }
     private Armour.ArmourType armourType;
     private Armour.Rarity rarity;
