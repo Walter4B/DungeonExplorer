@@ -32,6 +32,8 @@ public class CommanChest : MonoBehaviour
         {
             item.AddItem();
         }
+
+        copyPanel.GetComponentInChildren<Potion>().Init();
     }
 
     private void Update()

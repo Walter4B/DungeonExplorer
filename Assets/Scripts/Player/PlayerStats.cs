@@ -45,6 +45,7 @@ public class PlayerStats : MonoBehaviour
     private void Start()
     {
         PlayerMana.text = currentMana + "/" + Mana;
+        UpdatePotions();
     }
 
     private void Update()
@@ -60,6 +61,21 @@ public class PlayerStats : MonoBehaviour
         {
             DamageTimer();
             CanTakeDamage = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ManaPotions--;
+            currentMana += 50;
+            PlayerMana.text = currentMana + "/" + Mana;
+            UpdatePotions();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            HealthPotions--;
+            UpdatePotions();
+            UpdatePlayerHealth(50);
         }
     }
 
@@ -84,7 +100,7 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdatePlayerHealth(int healthToAdd = 0)
     {
-        currentHealth += healthToAdd;
+        currentHealth = currentHealth + healthToAdd > Health ? Health : currentHealth + healthToAdd;
         HealthBar.value = currentHealth;
         PlayerHealth.text = currentHealth + "/" + Health;
     }
@@ -139,5 +155,11 @@ public class PlayerStats : MonoBehaviour
         } while (damage > 0);
 
         return damage;
+    }
+
+    private void UpdatePotions()
+    {
+        NumOfHealthPotions.text = HealthPotions.ToString();
+        NumOfManaPotions.text = ManaPotions.ToString();
     }
 }
