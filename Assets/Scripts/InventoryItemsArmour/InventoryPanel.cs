@@ -40,10 +40,9 @@ public class InventoryPanel : MonoBehaviour
         stats = new List<string>
         {
             slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.ArmourValue).ToString(),
-
-            (slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.Stamina) + 10).ToString(),
+            (slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.Stamina) + 20).ToString(),
             slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.Strength).ToString(),
-            slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.Intellect).ToString()
+            (slots.Select(slot => slot.GetArmourPiece()).Where(piece => piece != null).Sum(piece => piece.Intellect) + 20).ToString()
         };
 
         statsValues.UpdateStats(stats);

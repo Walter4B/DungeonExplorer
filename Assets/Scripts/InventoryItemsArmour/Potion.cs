@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Potion : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Potion : MonoBehaviour
     [SerializeField]
     private Image image;
     [SerializeField]
-    private Text potionName;
+    private TextMeshProUGUI potionName;
 
     public void Init()
     {

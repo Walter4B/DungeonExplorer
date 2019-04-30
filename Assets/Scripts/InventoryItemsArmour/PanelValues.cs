@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PanelValues : MonoBehaviour
 {
     public Image image;
-    new public Text name;
-    public Text armourValue;
-    public Text staminaValue;
-    public Text strenghtValue;
-    public Text IntellectValue;
+    new public TextMeshProUGUI name;
+    public TextMeshProUGUI armourValue;
+    public TextMeshProUGUI staminaValue;
+    public TextMeshProUGUI strenghtValue;
+    public TextMeshProUGUI IntellectValue;
 
     public void UpdateValues(ArmourPiece item)
     {

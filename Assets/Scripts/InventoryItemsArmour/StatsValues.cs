@@ -1,28 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class StatsValues : MonoBehaviour
 {
     [SerializeField]
     private PlayerStats playerStats;
 
-    public Text armourValue;
-    public Text staminaValue;
-    public Text strenghtValue;
-    public Text IntellectValue;
+    [SerializeField]
+    private TextMeshProUGUI armourValue;
+    [SerializeField]
+    private TextMeshProUGUI staminaValue;
+    [SerializeField]
+    private TextMeshProUGUI strenghtValue;
+    [SerializeField]
+    private TextMeshProUGUI IntellectValue;
+    [SerializeField]
+    private TextMeshProUGUI healthValue;
 
     public void UpdateStats(List<string> stats)
     {
         armourValue.text = stats[0];
-        staminaValue.text = stats[1];
+        staminaValue.text = (int.Parse(stats[1]) - 20).ToString();
         strenghtValue.text = stats[2];
-        IntellectValue.text = stats[3];
+        IntellectValue.text = (int.Parse(stats[3]) - 20).ToString();
 
-        int healthToAdd = int.Parse(staminaValue.text) * 10 - playerStats.Health;
-        playerStats.Health = int.Parse(staminaValue.text) * 10;
+        int healthToAdd = int.Parse(stats[1]) * 5 - playerStats.Health;
+        playerStats.Health = int.Parse(stats[1]) * 5;
+        healthValue.text = playerStats.Health.ToString();
         playerStats.UpdatePlayerHealth(healthToAdd);
+
+        int manaToAdd = int.Parse(stats[3]) * 5 - playerStats.Mana;
+        playerStats.Mana = int.Parse(stats[3]) * 5;
+        playerStats.UpdatePlayerMana(manaToAdd);
+
         playerStats.Armor = int.Parse(armourValue.text);
+        playerStats.PlayerArmor.text = armourValue.text;
     }
 }

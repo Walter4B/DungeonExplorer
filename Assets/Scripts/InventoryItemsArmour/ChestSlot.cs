@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Linq;
 using System.Collections.Generic;
 
 public class ChestSlot : Slot
 {
     [SerializeField]
-    private Text text;
+    private TextMeshProUGUI text;
     [SerializeField]
     private GameObject playerItems;
 
@@ -24,7 +25,10 @@ public class ChestSlot : Slot
         var slotToAddTo = playerItems.gameObject.GetComponentsInChildren<MyInventorySlot>()[Armour.GetSlotIndex(item.ArmourSlot)];
         ArmourPiece itemBackup = slotToAddTo.GetArmourPiece();
 
-        slotToAddTo.AddItem(this.item);
+        if (slotToAddTo != null)
+            slotToAddTo.AddItem(this.item);
+        else
+            Debug.Log("ERROR!");
 
         if (itemBackup != null)
         {

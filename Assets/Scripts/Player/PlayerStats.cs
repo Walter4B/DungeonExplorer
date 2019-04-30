@@ -29,7 +29,6 @@ public class PlayerStats : MonoBehaviour
 
     private int currentHealth;
     private int currentMana;
-    private int activeScene;
 
     private InventoryPanel inventory;
 
@@ -66,9 +65,8 @@ public class PlayerStats : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             ManaPotions--;
-            currentMana += 50;
-            PlayerMana.text = currentMana + "/" + Mana;
             UpdatePotions();
+            UpdatePlayerMana(50);
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -103,6 +101,13 @@ public class PlayerStats : MonoBehaviour
         currentHealth = currentHealth + healthToAdd > Health ? Health : currentHealth + healthToAdd;
         HealthBar.value = currentHealth;
         PlayerHealth.text = currentHealth + "/" + Health;
+    }
+
+    public void UpdatePlayerMana(int manaToAdd = 0)
+    {
+        currentMana = currentMana + manaToAdd > Mana ? Mana : currentMana + manaToAdd;
+        ManaBar.value = currentMana;
+        PlayerMana.text = currentMana + "/" + Mana;
     }
 
     private int GetDamage(int damage)
