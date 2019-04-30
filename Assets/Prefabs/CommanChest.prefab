@@ -99,10 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba45928a63840d4da5875903c9bcb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentCanvasTransform: {fileID: 224946205941807160, guid: b2a4e594f654fa147812e5e29215edb9,
+  parentCanvasTransform: {fileID: 224090728836112128, guid: b2a4e594f654fa147812e5e29215edb9,
     type: 2}
-  chestPanel: {fileID: 1449545944391392, guid: b2a4e594f654fa147812e5e29215edb9, type: 2}
+  chestPanel: {fileID: 1277499988419248, guid: b2a4e594f654fa147812e5e29215edb9, type: 2}
   Player: {fileID: 4189006072030128, guid: bff0fd36a49b1e143a6b76594a83fa1b, type: 2}
+  characterPanel: {fileID: 1037934715650806, guid: b2a4e594f654fa147812e5e29215edb9,
+    type: 2}
 --- !u!212 &212961370516977984
 SpriteRenderer:
   m_ObjectHideFlags: 1

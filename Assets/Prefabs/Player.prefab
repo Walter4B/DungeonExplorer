@@ -429,8 +429,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c54369c25f2e7469e7447b7dbb01b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerInventory: {fileID: 1946168914552724, guid: b2a4e594f654fa147812e5e29215edb9,
+  PlayerInventory: {fileID: 1037934715650806, guid: b2a4e594f654fa147812e5e29215edb9,
     type: 2}
+  slots: []
 --- !u!114 &114416290846024750
 MonoBehaviour:
   m_ObjectHideFlags: 1
