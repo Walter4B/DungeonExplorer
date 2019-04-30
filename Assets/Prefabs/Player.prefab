@@ -63,7 +63,6 @@ GameObject:
   - component: {fileID: 114056643488251226}
   - component: {fileID: 114105140669920518}
   - component: {fileID: 114636925674617150}
-  - component: {fileID: 95908202264517054}
   - component: {fileID: 114251339681619836}
   m_Layer: 9
   m_Name: Player
@@ -142,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1241974603760636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.52, y: 12.33, z: 0}
+  m_LocalPosition: {x: 31.39, y: 12.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4347675092473318}
@@ -342,24 +341,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1215235183826014}
   m_Enabled: 1
---- !u!95 &95908202264517054
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1241974603760636}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114056643488251226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,8 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c54369c25f2e7469e7447b7dbb01b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerInventory: {fileID: 1037934715650806, guid: b2a4e594f654fa147812e5e29215edb9,
-    type: 2}
+  PlayerInventory: {fileID: 0}
   slots: []
 --- !u!114 &114416290846024750
 MonoBehaviour:
