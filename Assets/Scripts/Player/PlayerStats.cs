@@ -62,14 +62,14 @@ public class PlayerStats : MonoBehaviour
             CanTakeDamage = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && ManaPotions > 0)
         {
             ManaPotions--;
             UpdatePotions();
             UpdatePlayerMana(50);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && HealthPotions > 0)
         {
             HealthPotions--;
             UpdatePotions();

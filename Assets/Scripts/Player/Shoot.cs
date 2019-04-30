@@ -31,6 +31,11 @@ public class Shoot : MonoBehaviour
         ThisScene = SceneManager.GetActiveScene().buildIndex;
         if (!PauseMenu.GameIsPaused)
         {
+            if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+
             if (Input.GetButtonDown("Fire1") && !Attacking)
             {
                 Swing();
