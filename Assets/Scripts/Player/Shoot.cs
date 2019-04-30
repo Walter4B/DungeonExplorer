@@ -21,6 +21,8 @@ public class Shoot : MonoBehaviour
     private GameObject _projectileParent;
     private GameObject _swingParent;
 
+    private int mana;
+
     void Awake()
     {
         ParentInstantiate();
@@ -43,7 +45,7 @@ public class Shoot : MonoBehaviour
                 Invoke("SetBoolBack", 1);
             }
 
-            if (Input.GetButtonDown("Fire2") && !Attacking)
+            if (Input.GetButtonDown("Fire2") && !Attacking && this.gameObject.GetComponent<PlayerStats>().currentMana >= 10)
             {
                 Shooting();
                 Attacking = true;
@@ -59,6 +61,7 @@ public class Shoot : MonoBehaviour
     
     void Shooting ()
     {
+        this.gameObject.GetComponent<PlayerStats>().CastSpell();
         GameObject projectileClone = Instantiate(ProjectilePrefab, FiringPoint.position, Quaternion.identity, _projectileParent.transform);
         Rigidbody2D projectileRigidbody = projectileClone.GetComponent<Rigidbody2D>();
         projectileRigidbody.AddForce(FiringPoint.forward * Power, ForceMode2D.Force);
@@ -66,6 +69,7 @@ public class Shoot : MonoBehaviour
 
     void Swing()
     {
+        mana -= 10;
         GameObject swingClone = Instantiate(SwingPrefab, FiringPoint.position, Quaternion.identity, _swingParent.transform);
         swingClone.transform.SetParent(FiringPoint);
         swingClone.transform.rotation = Quaternion.identity;

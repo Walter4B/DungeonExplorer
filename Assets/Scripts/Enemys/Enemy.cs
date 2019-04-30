@@ -15,10 +15,21 @@ public class Enemy : MonoBehaviour
     public Transform EnemyFiringPoint;
 
     private bool isAttacking = false;
+    private bool isCasting = false;
     private bool isColliding = false;
 
     private GameObject player;
     private Transform target;
+
+    [SerializeField]
+    private GameObject Gate;
+
+    [SerializeField]
+    private bool isMele = true;
+    [SerializeField]
+    private bool isRanged = true;
+    [SerializeField]
+    private bool isBoss = false;
 
     private void Start()
     {
@@ -29,15 +40,32 @@ public class Enemy : MonoBehaviour
     //public ParticleSystem ExplosionPrefab;
     private void FixedUpdate()
     {
-        if(Vector2.Distance(transform.position, target.position) < SearchDistance && !isAttacking)
+        if (Health <= 0 && isBoss)
+        {
+            Destroy(Gate);
+            Destroy(gameObject);
+        }
+
+        if (isRanged && Vector2.Distance(transform.position, target.position) < SearchDistance && !isAttacking)
         {
             Shoot();
             isAttacking = true;
             Invoke("SetBoolBackAttack", 2);
         }
 
+        if (isMele && Vector2.Distance(transform.position, target.position) < SearchDistance && !isCasting)
+        {
+            Swing();
+            isCasting = true;
+            Invoke("SetBoolBackCast", 2);
+        }
+
         if (Health <= 0)
         {
+            if(isBoss)
+            {
+                Destroy(Gate);
+            }
             Destroy(gameObject);
         }
 
@@ -49,14 +77,6 @@ public class Enemy : MonoBehaviour
    
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Projectile")
-        {
-
-            //if (ExplosionPrefab)
-            //Instantiate(ExplosionPrefab, transform.position, transform.rotation);
-            Health = Health - 10;
-            Destroy(other.gameObject);
-        }
 
         if (other.tag == "Weapon")
         {
@@ -87,6 +107,11 @@ public class Enemy : MonoBehaviour
         projectileRigidBody.AddForce(EnemyFiringPoint.forward * Power, ForceMode2D.Force);
     }
 
+    private void Swing()
+    {
+
+    }
+
     private void SetBoolBackCollide()
     {
         isColliding = false;
@@ -95,5 +120,14 @@ public class Enemy : MonoBehaviour
     private void SetBoolBackAttack()
     {
         isAttacking = false;
+    }
+    private void SetBoolBackCast()
+    {
+        isAttacking = false;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
     }
 }

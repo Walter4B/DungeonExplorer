@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class EnemyFireBall : MonoBehaviour
 {
-    private GameObject player;
+    private bool damaged = false;
 
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
+    [SerializeField]
+    private GameObject _explosion;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Wall")
         {
+            Instantiate(_explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
-        if (other.tag == "Player")
+        if (other.tag == "Player" && damaged == false)
         {
-            player.GetComponent<PlayerStats>().TakeDamage(7);
+            damaged = true;
+            Instantiate(_explosion, transform.position, transform.rotation);
+            other.GetComponent<PlayerStats>().TakeDamage(7);
             Destroy(gameObject);
         }
     }

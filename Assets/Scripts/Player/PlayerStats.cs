@@ -28,7 +28,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject UICanvas;
 
     private int currentHealth;
-    private int currentMana;
+    public int currentMana;
 
     private InventoryPanel inventory;
 
@@ -89,6 +89,13 @@ public class PlayerStats : MonoBehaviour
             PlayerArmor.text = Armor.ToString();
             UpdatePlayerHealth();
         }
+    }
+
+    public void CastSpell()
+    {
+        currentMana -= 10;
+        PlayerMana.text = currentMana.ToString();
+        UpdatePlayerMana();
     }
 
     IEnumerator DamageTimer()
