@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 58631659702475932}
   - component: {fileID: 58096414568109244}
   - component: {fileID: 114273240464371074}
+  - component: {fileID: 114111923693792792}
   m_Layer: 0
   m_Name: Lvl4Boss
   m_TagString: Enemy
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619611174605626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.16, y: 20.42, z: 0}
+  m_LocalPosition: {x: 8.27, y: 0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4546675636427302}
@@ -94,7 +95,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58096414568109244
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -125,6 +126,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.1
+--- !u!114 &114111923693792792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619611174605626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13912067b3eebaf428ff3b8d8503f7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 1159371911768858, guid: ce1ba24e41bae9c46bcebabf19bffd49,
+    type: 2}
+  _projectileS16: {fileID: 1741320905054912, guid: 59522df9607fe2742ab136e675e3b8c9,
+    type: 2}
+  FiringPoint: {fileID: 4546675636427302}
+  Power: 250
+  SearchDistance: 20
+  _rangedAttackIconRay: {fileID: 1130890058638052, guid: f4230af9d1d71dc49aa1d8c4737b8f62,
+    type: 2}
+  _rangedAttackIconS16: {fileID: 1795732831767142, guid: 72f744a6d40f0fe438f07c6c05facd84,
+    type: 2}
 --- !u!114 &114273240464371074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,16 +159,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d63985010742d84fb478aa01e5d3867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyProjectilePrefab: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
+  EnemyProjectilePrefab: {fileID: 1159371911768858, guid: ce1ba24e41bae9c46bcebabf19bffd49,
     type: 2}
   Health: 50
-  Power: 2
+  Power: 500
   SearchDistance: 20
+  _rangeReloadDuration: 2
+  _meleReloadDuration: 2
   EnemyFiringPoint: {fileID: 4546675636427302}
   Gate: {fileID: 0}
   isMele: 0
   isRanged: 1
   isBoss: 1
+  _meleAttackIcon: {fileID: 1806207287842126, guid: 9b4a19bdbc7b791468fca413bf7241ce,
+    type: 2}
+  _rangedAttackIcon: {fileID: 1715687415513502, guid: 4e86e364182c0c24dacaea2ab11711b3,
+    type: 2}
 --- !u!114 &114597798035240772
 MonoBehaviour:
   m_ObjectHideFlags: 1

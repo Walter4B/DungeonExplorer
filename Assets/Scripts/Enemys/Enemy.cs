@@ -12,6 +12,11 @@ public class Enemy : MonoBehaviour
     public float Power = 2;
     public float SearchDistance = 20;
 
+    [SerializeField]
+    private float _rangeReloadDuration = 2;
+    [SerializeField]
+    private float _meleReloadDuration = 2;
+
     public Transform EnemyFiringPoint;
 
     private bool isAttacking = false;
@@ -31,6 +36,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private bool isBoss = false;
 
+    [SerializeField]
+    private GameObject _meleAttackIcon;
+    [SerializeField]
+    private GameObject _rangedAttackIcon;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -46,18 +56,18 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (isRanged && Vector2.Distance(transform.position, target.position) < SearchDistance && !isAttacking)
+        if (isRanged && Vector2.Distance(transform.position, target.position) < SearchDistance && !isCasting)
         {
-            Shoot();
-            isAttacking = true;
-            Invoke("SetBoolBackAttack", 2);
+            StartCoroutine(ShootingTimer());
+            isCasting = true;
+            Invoke("SetBoolBackCast", _rangeReloadDuration);
         }
 
-        if (isMele && Vector2.Distance(transform.position, target.position) < SearchDistance && !isCasting)
+        if (isMele && Vector2.Distance(transform.position, target.position) < SearchDistance && !isAttacking)
         {
-            Swing();
-            isCasting = true;
-            Invoke("SetBoolBackCast", 2);
+            StartCoroutine(SwingingTimer());
+            isAttacking = true;
+            Invoke("SetBoolBackAttack", _meleReloadDuration);
         }
 
         if (Health <= 0)
@@ -92,7 +102,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 isColliding = true;
-                player.GetComponent<PlayerStats>().TakeDamage(10);
+                player.GetComponent<PlayerStats>().TakeDamage(5);
                 player.GetComponent<PlayerStats>().CanTakeDamage = false;
             }
             //if (ExplosionPrefab)
@@ -112,6 +122,21 @@ public class Enemy : MonoBehaviour
 
     }
 
+    IEnumerator ShootingTimer()
+    {
+        GameObject RangedIconClone = Instantiate(_rangedAttackIcon, transform.position, Quaternion.identity, transform.parent);
+        RangedIconClone.transform.Translate(new Vector3(0, 1, 0));
+        yield return new WaitForSeconds(0.5f);
+        Shoot();
+    }
+    IEnumerator SwingingTimer()
+    {
+        GameObject MeleIconClone = Instantiate(_meleAttackIcon, transform.position, Quaternion.identity, transform.parent);
+        MeleIconClone.transform.Translate(new Vector3(0, 1, 0));
+        yield return new WaitForSeconds(0.5f);
+        Swing();
+    }
+
     private void SetBoolBackCollide()
     {
         isColliding = false;
@@ -123,7 +148,7 @@ public class Enemy : MonoBehaviour
     }
     private void SetBoolBackCast()
     {
-        isAttacking = false;
+        isCasting = false;
     }
 
     public void TakeDamage(int damage)

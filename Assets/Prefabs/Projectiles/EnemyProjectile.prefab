@@ -189,6 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explosion: {fileID: 1224662589693386, guid: a7e5aa28227730e41be9a3befa540e4e, type: 2}
+  damage: 7
+  _BossMinion: {fileID: 0}
+  _isBossOrb: 0
 --- !u!114 &114847516659789262
 MonoBehaviour:
   m_ObjectHideFlags: 1

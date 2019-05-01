@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1253568540654150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.06, y: 0, z: 0}
+  m_LocalPosition: {x: 92.02, y: -68.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4887150266565964}
@@ -94,7 +94,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58838115269256212
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -138,14 +138,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyProjectilePrefab: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
     type: 2}
-  Health: 50
-  Power: 2
+  Health: 150
+  Power: 200
   SearchDistance: 20
+  _rangeReloadDuration: 2
+  _meleReloadDuration: 2
   EnemyFiringPoint: {fileID: 4887150266565964}
   Gate: {fileID: 0}
   isMele: 1
   isRanged: 0
   isBoss: 1
+  _meleAttackIcon: {fileID: 1293124574857504, guid: 5e84b9848f30e5946a33271c62d6a2d9,
+    type: 2}
+  _rangedAttackIcon: {fileID: 1302491736875230, guid: a5267785a09e108429faf6e8b7d8cbd6,
+    type: 2}
 --- !u!114 &114249290553921596
 MonoBehaviour:
   m_ObjectHideFlags: 1

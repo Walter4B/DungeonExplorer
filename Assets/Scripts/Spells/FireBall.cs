@@ -5,9 +5,14 @@ using UnityEngine;
 public class FireBall : MonoBehaviour {
 
     private bool damaged = false;
-
+    [SerializeField]
+    private int damage = 10;
     [SerializeField]
     private GameObject _explosion;
+    [SerializeField]
+    private GameObject _BossMinion;
+    [SerializeField]
+    private bool _isBossOrb = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,7 +25,7 @@ public class FireBall : MonoBehaviour {
         {
             damaged = true;
             Instantiate(_explosion,transform.position,transform.rotation);
-            other.GetComponent<Enemy>().TakeDamage(10);
+            other.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }

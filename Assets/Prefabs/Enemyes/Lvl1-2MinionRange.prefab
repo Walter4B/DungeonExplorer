@@ -94,7 +94,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58089068285222428
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -152,14 +152,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyProjectilePrefab: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
     type: 2}
-  Health: 50
-  Power: 2
+  Health: 40
+  Power: 400
   SearchDistance: 20
+  _rangeReloadDuration: 2
+  _meleReloadDuration: 2
   EnemyFiringPoint: {fileID: 4858893992652688}
   Gate: {fileID: 0}
   isMele: 0
   isRanged: 1
   isBoss: 0
+  _meleAttackIcon: {fileID: 1188093529857254, guid: 5b898d5c0cd319f4aae54439d87dc590,
+    type: 2}
+  _rangedAttackIcon: {fileID: 1302491736875230, guid: a5267785a09e108429faf6e8b7d8cbd6,
+    type: 2}
 --- !u!114 &114692049263375996
 MonoBehaviour:
   m_ObjectHideFlags: 1
