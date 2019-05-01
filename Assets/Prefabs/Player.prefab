@@ -366,6 +366,7 @@ MonoBehaviour:
   NumOfManaPotions: {fileID: 0}
   CanTakeDamage: 1
   UICanvas: {fileID: 0}
+  currentMana: 0
 --- !u!114 &114070760130893532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -391,7 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 1300212148095512, guid: 3873165cf84096b4ea0b6430d9cfdb5a,
     type: 2}
-  SwingPrefab: {fileID: 1287288557781408, guid: 9269ae72a6f0dad4d8a1897cdaf5b454,
+  SwingPrefab: {fileID: 1745088849037912, guid: 9269ae72a6f0dad4d8a1897cdaf5b454,
     type: 2}
   FiringPoint: {fileID: 4325135492157710}
   TargetCrossHair: {fileID: 4347675092473318}
