@@ -36,6 +36,9 @@ public class PlayerStats : MonoBehaviour
 
     private InventoryPanel inventory;
 
+    public GameObject RedHit;
+    private GameObject RedHitClone;
+
     private void Awake()
     {
         currentHealth = Health;
@@ -93,6 +96,9 @@ public class PlayerStats : MonoBehaviour
 
             PlayerArmor.text = Armor.ToString();
             UpdatePlayerHealth();
+            RedHitClone = Instantiate(RedHit, transform.position, Quaternion.identity);
+            RedHitClone.transform.SetParent(gameObject.transform);
+            Invoke("RedHitDestroy", 0.2f);
         }
     }
 
@@ -179,5 +185,10 @@ public class PlayerStats : MonoBehaviour
     {
         NumOfHealthPotions.text = HealthPotions.ToString();
         NumOfManaPotions.text = ManaPotions.ToString();
+    }
+
+    private void RedHitDestroy()
+    {
+        Destroy(RedHitClone);
     }
 }
