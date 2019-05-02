@@ -11276,7 +11276,24 @@ Prefab:
       propertyPath: UICanvas
       value: 
       objectReference: {fileID: 798699288}
-    m_RemovedComponents: []
+    - target: {fileID: 114550009483172520, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: WeaponPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114550009483172520, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: SwingPrefab
+      value: 
+      objectReference: {fileID: 1745088849037912, guid: 9269ae72a6f0dad4d8a1897cdaf5b454,
+        type: 2}
+    - target: {fileID: 61582109553510432, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114077631735761338, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1152087631 stripped
@@ -16357,6 +16374,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4132747794253156, guid: 328bb28c9f9b37641b317a4252b02409,
     type: 2}
   m_PrefabInternal: {fileID: 271879696}
+--- !u!1 &1479583908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1386053074208984, guid: 0c15bd4fcba21b54388408a05a5a113a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1149553541}
+--- !u!114 &1479583909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479583908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3642d5e958ce7ef4fa9651d27fd0c880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1534533550 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114879101254614880, guid: f846f6ae71a0ca049927d2e842fbedca,

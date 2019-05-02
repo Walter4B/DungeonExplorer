@@ -20124,10 +20124,6 @@ Prefab:
       propertyPath: Gate
       value: 
       objectReference: {fileID: 2128574745}
-    - target: {fileID: 1253568540654150, guid: 3176826e00444594d83f2e97ff298316, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3176826e00444594d83f2e97ff298316, type: 2}
   m_IsPrefabAsset: 0

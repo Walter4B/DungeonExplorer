@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 114023356040795194}
   - component: {fileID: 50378518326453428}
   - component: {fileID: 114218854757519632}
-  - component: {fileID: 70348589330091582}
   - component: {fileID: 61383127043753736}
+  - component: {fileID: 61440057162488630}
   m_Layer: 0
   m_Name: Lvl1-2MinionRange
   m_TagString: Enemy
@@ -107,7 +107,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0041627884, y: -0.029132843}
+  m_Offset: {x: 0.0018577576, y: -0.03143835}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -118,10 +118,10 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6420841, y: 0.90843964}
+  m_Size: {x: 0.4899063, y: 0.8208227}
   m_EdgeRadius: 0
---- !u!70 &70348589330091582
-CapsuleCollider2D:
+--- !u!61 &61440057162488630
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -132,9 +132,19 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016647339, y: -0.0332942}
-  m_Size: {x: 0.8834686, y: 1.2830038}
-  m_Direction: 0
+  m_Offset: {x: 0, y: -0.02997446}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63108444, y: 0.9400511}
+  m_EdgeRadius: 0
 --- !u!114 &114023356040795194
 MonoBehaviour:
   m_ObjectHideFlags: 1

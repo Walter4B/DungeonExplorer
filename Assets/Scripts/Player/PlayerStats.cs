@@ -129,6 +129,7 @@ public class PlayerStats : MonoBehaviour
         }
 
         var armourPieces = inventory.GetItemsFromSlots();
+
         //u ovom ifu se gleda jel je damage veci ili jednak od ukupnog armora
         if (damage >= Armor)
         {
