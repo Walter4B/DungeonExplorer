@@ -21,10 +21,11 @@ public class Shoot : MonoBehaviour
     private GameObject _projectileParent;
     private GameObject _swingParent;
 
-    private int mana;
+    private PlayerStats ManaCost;
 
     void Awake()
     {
+        ManaCost = this.gameObject.GetComponent<PlayerStats>();
         ParentInstantiate();
     }
 
@@ -61,7 +62,7 @@ public class Shoot : MonoBehaviour
     
     void Shooting ()
     {
-        this.gameObject.GetComponent<PlayerStats>().CastSpell();
+        ManaCost.CastSpell();
         GameObject projectileClone = Instantiate(ProjectilePrefab, FiringPoint.position, Quaternion.identity, _projectileParent.transform);
         Rigidbody2D projectileRigidbody = projectileClone.GetComponent<Rigidbody2D>();
         projectileRigidbody.AddForce(FiringPoint.forward * Power, ForceMode2D.Force);
@@ -69,10 +70,11 @@ public class Shoot : MonoBehaviour
 
     void Swing()
     {
-        mana -= 10;
-        GameObject swingClone = Instantiate(SwingPrefab, FiringPoint.position, Quaternion.identity, _swingParent.transform);
-        swingClone.transform.SetParent(FiringPoint);
-        swingClone.transform.rotation = Quaternion.identity;
+        float rotation_z = Mathf.Atan2(FiringPoint.forward.y, FiringPoint.forward.x) * Mathf.Rad2Deg;
+
+
+        GameObject swingClone = Instantiate(SwingPrefab, FiringPoint.position + FiringPoint.forward, Quaternion.Euler(0,0,rotation_z - 90) ,_swingParent.transform);
+        swingClone.transform.SetParent(gameObject.transform);
         Rigidbody2D projectileRigidbody = swingClone.GetComponent<Rigidbody2D>();
     }
 

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
     public GameObject EnemyProjectilePrefab;
+    public GameObject EnemySwingPrefab;
 
     public int Health = 50;
 
@@ -87,12 +88,6 @@ public class Enemy : MonoBehaviour
    
     void OnTriggerEnter2D(Collider2D other)
     {
-
-        if (other.tag == "Weapon")
-        {
-            Health -= 10;
-        }
-
         if (other.tag == "Player")
         {
             if (isColliding)
@@ -119,13 +114,19 @@ public class Enemy : MonoBehaviour
 
     private void Swing()
     {
+        float rotation_z = Mathf.Atan2(EnemyFiringPoint.forward.y, EnemyFiringPoint.forward.x) * Mathf.Rad2Deg;
 
+
+        GameObject swingClone = Instantiate(EnemySwingPrefab, EnemyFiringPoint.position + EnemyFiringPoint.forward, Quaternion.Euler(0, 0, rotation_z - 90));
+        swingClone.transform.SetParent(gameObject.transform);
+        Rigidbody2D projectileRigidbody = swingClone.GetComponent<Rigidbody2D>();
     }
 
     IEnumerator ShootingTimer()
     {
         GameObject RangedIconClone = Instantiate(_rangedAttackIcon, transform.position, Quaternion.identity, transform.parent);
         RangedIconClone.transform.Translate(new Vector3(0, 1, 0));
+        RangedIconClone.transform.SetParent(gameObject.transform);
         yield return new WaitForSeconds(0.5f);
         Shoot();
     }
@@ -133,6 +134,7 @@ public class Enemy : MonoBehaviour
     {
         GameObject MeleIconClone = Instantiate(_meleAttackIcon, transform.position, Quaternion.identity, transform.parent);
         MeleIconClone.transform.Translate(new Vector3(0, 1, 0));
+        MeleIconClone.transform.SetParent(gameObject.transform);
         yield return new WaitForSeconds(0.5f);
         Swing();
     }
@@ -154,5 +156,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Health -= damage;
+        Debug.Log(damage);
     }
 }

@@ -161,6 +161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyProjectilePrefab: {fileID: 1159371911768858, guid: ce1ba24e41bae9c46bcebabf19bffd49,
     type: 2}
+  EnemySwingPrefab: {fileID: 1413688285698736, guid: 445529a657828c247a705ac559d6279e,
+    type: 2}
   Health: 50
   Power: 500
   SearchDistance: 20
