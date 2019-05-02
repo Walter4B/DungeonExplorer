@@ -5,35 +5,49 @@ using System.Collections.Generic;
 
 public class CommanChest : MonoBehaviour
 {
-    [SerializeField]
+ //   [SerializeField]
     private Transform parentCanvasTransform;
-    [SerializeField]
+  //  [SerializeField]
     private GameObject chestPanel;
-    [SerializeField]
+  //  [SerializeField]
     private Transform Player;
-    [SerializeField]
+   // [SerializeField]
     private GameObject characterPanel;
 
     private readonly float radius = 2.5f;
     private float distance;
     private enum Clickable { ChestClicked, ChestNotClicked, DidntClick }
 
-    private GameObject copyPanel;
-
     private ChestSlot[] slots;
 
-    private void Start()
+    private void Awake()
     {
-        copyPanel = Instantiate(chestPanel, parentCanvasTransform);
-        copyPanel.SetActive(false);
-        slots = copyPanel.GetComponentsInChildren<ChestSlot>();
+        parentCanvasTransform = GameObject.Find("InventoryCanvas").transform;
+
+        chestPanel = gameObject.transform.Find(gameObject.name + "Panel").gameObject;
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
+        characterPanel = parentCanvasTransform.Find("CharacterPanel").gameObject;
+
+        ////chestPanel.transform.SetParent(parentCanvasTransform);
+        var canvas = chestPanel.GetComponent<Canvas>();
+
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        canvas.sortingLayerID = parentCanvasTransform.GetComponent<Canvas>().sortingLayerID;
+        canvas.sortingOrder = 5;
+
+        canvas.GetComponent<RectTransform>().anchoredPosition = new Vector2(10,0);
+
+
+        chestPanel.SetActive(false);
+        slots = chestPanel.GetComponentsInChildren<ChestSlot>();
 
         foreach (var item in slots)
         {
             item.AddItem();
         }
 
-        copyPanel.GetComponentInChildren<Potion>().Init();
+        chestPanel.GetComponentInChildren<Potion>().Init();
     }
 
     private void Update()
@@ -47,12 +61,12 @@ public class CommanChest : MonoBehaviour
 
         if (distance < radius && CheckIfClicked() == Clickable.ChestClicked)
         {
-            copyPanel.SetActive(!copyPanel.activeSelf);
+            chestPanel.SetActive(!chestPanel.activeSelf);
         }
 
-        if (copyPanel.activeSelf && (distance > radius || CheckIfClicked() == Clickable.ChestNotClicked))
+        if (chestPanel.activeSelf && (distance > radius || CheckIfClicked() == Clickable.ChestNotClicked))
         {
-            copyPanel.SetActive(false);
+            chestPanel.SetActive(false);
         }
     }
 
@@ -65,7 +79,7 @@ public class CommanChest : MonoBehaviour
 
             if (hitCollider != null && hitCollider.CompareTag("Chest"))
             {
-                if (!copyPanel.activeSelf)
+                if (!chestPanel.activeSelf)
                 {
                     characterPanel.SetActive(true);
                 }
@@ -79,5 +93,10 @@ public class CommanChest : MonoBehaviour
         }
 
         return Clickable.DidntClick;
+    }
+
+    public void DestroyClone()
+    {
+        chestPanel.transform.SetParent(this.transform);
     }
 }
