@@ -14,7 +14,7 @@ public class EnemySwordSwing : MonoBehaviour
         if (other.tag == "Player" && damaged == false)
         {
             damaged = true;
-            other.GetComponent<Enemy>().TakeDamage(damage);
+            other.GetComponent<PlayerStats>().TakeDamage(damage);
         }
     }
 }

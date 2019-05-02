@@ -24,7 +24,6 @@ public class Enemy : MonoBehaviour
     private bool isCasting = false;
     private bool isColliding = false;
 
-    private GameObject player;
     private Transform target;
 
     [SerializeField]
@@ -46,8 +45,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        target = player.transform;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     //public ParticleSystem ExplosionPrefab;
