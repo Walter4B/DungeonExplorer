@@ -24,11 +24,18 @@ public class CommanChest : MonoBehaviour
     {
         parentCanvasTransform = GameObject.Find("InventoryCanvas").transform;
 
-        chestPanel = gameObject.transform.Find(gameObject.name + "Panel").gameObject;
+        if (gameObject.name.Contains("Comman"))
+        {
+            chestPanel = gameObject.transform.Find("CommanChestPanel").gameObject;
+        }
+        else
+        {
+            chestPanel = gameObject.transform.Find("BossChestPanel").gameObject;
+        }
+
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         characterPanel = parentCanvasTransform.Find("CharacterPanel").gameObject;
 
-        ////chestPanel.transform.SetParent(parentCanvasTransform);
         var canvas = chestPanel.GetComponent<Canvas>();
 
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
@@ -93,10 +100,5 @@ public class CommanChest : MonoBehaviour
         }
 
         return Clickable.DidntClick;
-    }
-
-    public void DestroyClone()
-    {
-        chestPanel.transform.SetParent(this.transform);
     }
 }

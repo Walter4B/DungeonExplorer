@@ -4,12 +4,16 @@ using TMPro;
 
 public class Potion : MonoBehaviour
 {
-    [SerializeField]
     private PlayerStats player;
     [SerializeField]
     private Image image;
     [SerializeField]
     private TextMeshProUGUI potionName;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+    }
 
     public void Init()
     {

@@ -8,8 +8,12 @@ public class ChestSlot : Slot
 {
     [SerializeField]
     private TextMeshProUGUI text;
-    [SerializeField]
     private GameObject playerItems;
+
+    private void Awake()
+    {
+        playerItems = GameObject.FindGameObjectWithTag("CharacterInventory");
+    }
 
     public void AddItem()
     {

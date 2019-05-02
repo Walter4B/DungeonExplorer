@@ -12,8 +12,13 @@ public class ItemPanel : MonoBehaviour
 
     private void Start()
     {
-        InventoryUI.onItemChangedCallback += ClosePanel;
+        InventoryUI.instance.onItemChangedCallback += ClosePanel;
         itemPanel.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        InventoryUI.instance.onItemChangedCallback -= ClosePanel;
     }
 
     public void ShowPanel()

@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114919376760924096}
   m_Layer: 5
   m_Name: CharacterPanel
-  m_TagString: CharacterInventory
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 222491172093665424}
   m_Layer: 5
   m_Name: CharacterItems
-  m_TagString: Untagged
+  m_TagString: CharacterInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 114806749697328820}
-  backupImage: {fileID: 21300000, guid: 824f03a85176d3b4d8d70a32f4a3f912, type: 3}
+  backupImage: {fileID: 21300000, guid: 8ae969b36e94dd346b139e621010a692, type: 3}
   button: {fileID: 114370951981739504}
 --- !u!114 &114243588156843184
 MonoBehaviour:
@@ -2157,7 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 114861266993717132}
-  backupImage: {fileID: 21300000, guid: 824f03a85176d3b4d8d70a32f4a3f912, type: 3}
+  backupImage: {fileID: 21300000, guid: 8ae969b36e94dd346b139e621010a692, type: 3}
   button: {fileID: 114734621887021538}
 --- !u!114 &114296426600324712
 MonoBehaviour:
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 114833842167643942}
-  backupImage: {fileID: 21300000, guid: 824f03a85176d3b4d8d70a32f4a3f912, type: 3}
+  backupImage: {fileID: 21300000, guid: 8ae969b36e94dd346b139e621010a692, type: 3}
   button: {fileID: 114091886500876960}
 --- !u!114 &114383366731149254
 MonoBehaviour:
@@ -3324,7 +3324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 114268787066321818}
-  backupImage: {fileID: 21300000, guid: 824f03a85176d3b4d8d70a32f4a3f912, type: 3}
+  backupImage: {fileID: 21300000, guid: 8ae969b36e94dd346b139e621010a692, type: 3}
   button: {fileID: 114258825878859890}
 --- !u!114 &114490408115236526
 MonoBehaviour:
@@ -3591,7 +3591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 114157769824376086}
-  backupImage: {fileID: 21300000, guid: 824f03a85176d3b4d8d70a32f4a3f912, type: 3}
+  backupImage: {fileID: 21300000, guid: 8ae969b36e94dd346b139e621010a692, type: 3}
   button: {fileID: 114296426600324712}
 --- !u!114 &114562495151756766
 MonoBehaviour:
@@ -4326,7 +4326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 114468300784706188}
-  backupImage: {fileID: 21300000, guid: 824f03a85176d3b4d8d70a32f4a3f912, type: 3}
+  backupImage: {fileID: 21300000, guid: 8ae969b36e94dd346b139e621010a692, type: 3}
   button: {fileID: 114338426676084180}
 --- !u!114 &114919376760924096
 MonoBehaviour:

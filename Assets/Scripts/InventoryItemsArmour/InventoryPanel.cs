@@ -16,10 +16,14 @@ public class InventoryPanel : MonoBehaviour
 
     private void Awake()
     {
-        InventoryUI.onItemChangedCallback += UpdateStats;
         statsValues = PlayerInventory.GetComponentInChildren<StatsValues>();
         slots = PlayerInventory.GetComponentsInChildren<MyInventorySlot>();
-        PlayerInventory.SetActive(false);
+        PlayerInventory.SetActive(true);
+    }
+
+    private void Start()
+    {
+        InventoryUI.instance.onItemChangedCallback += UpdateStats;
     }
 
     private void Update()

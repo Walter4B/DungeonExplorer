@@ -28,7 +28,7 @@ public class MyInventorySlot : Slot
             icon.enabled = true;
         }
 
-        InventoryUI.onItemChangedCallback.Invoke();
+        InventoryUI.instance.onItemChangedCallback.Invoke();
     }
 
     public void RemoveItem()
@@ -37,6 +37,11 @@ public class MyInventorySlot : Slot
         item = null;
         button.gameObject.SetActive(false);
 
-        InventoryUI.onItemChangedCallback.Invoke();
+        if (InventoryUI.instance == null)
+        {
+            Debug.Log("I FOUND YOU");
+        }
+        else
+            InventoryUI.instance.onItemChangedCallback.Invoke();
     }
 }

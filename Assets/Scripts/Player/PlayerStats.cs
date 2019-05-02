@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour
 
     //Ovo skripte uzimaju za damage kod napada
     public int SpellDamage = 10;
-    public int Meleedamage = 10;
+    public int MeleeDamage = 10;
 
     public Slider HealthBar;
     public Slider ManaBar;

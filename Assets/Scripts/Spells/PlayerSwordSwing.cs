@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerSwordSwing : MonoBehaviour
 {
-
     private bool damaged = false;
     [SerializeField]
     private int damage;
@@ -14,8 +13,10 @@ public class PlayerSwordSwing : MonoBehaviour
         if (other.tag == "Enemy" && damaged == false)
         {
             damaged = true;
-            damage = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().Meleedamage;
+            damage = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().MeleeDamage;
             other.GetComponent<Enemy>().TakeDamage(damage);
+            //ovak mozda mozeš popraviti da ti se damagea samo jedan neprijatelj (makneš onda ovu varijablu damaged)
+            // ---> GetComponent<Collider2D>().enabled = false;
         }
     }
 }

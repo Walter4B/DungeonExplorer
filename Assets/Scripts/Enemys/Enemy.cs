@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        target = player.transform;
     }
 
     //public ParticleSystem ExplosionPrefab;
