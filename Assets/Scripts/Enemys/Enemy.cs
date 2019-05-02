@@ -87,32 +87,8 @@ public class Enemy : MonoBehaviour
             }
             Destroy(gameObject);
         }
-
-        if (isColliding)
-        {
-            Invoke("SetBoolBackCollide", 1);
-        }
     }
    
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            if (isColliding)
-            {
-                return;
-            }
-            else
-            {
-                isColliding = true;
-                player.GetComponent<PlayerStats>().TakeDamage(5);
-                player.GetComponent<PlayerStats>().CanTakeDamage = false;
-            }
-            //if (ExplosionPrefab)
-                //Instantiate(ExplosionPrefab, transform.position, transform.rotation);
-        }
-    }
-
     private void Shoot()
     {
         GameObject projectileColne = Instantiate(EnemyProjectilePrefab, EnemyFiringPoint.position, Quaternion.identity);
@@ -145,11 +121,6 @@ public class Enemy : MonoBehaviour
         MeleIconClone.transform.SetParent(gameObject.transform);
         yield return new WaitForSeconds(0.5f);
         Swing();
-    }
-
-    private void SetBoolBackCollide()
-    {
-        isColliding = false;
     }
 
     private void SetBoolBackAttack()

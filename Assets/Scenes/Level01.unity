@@ -10983,14 +10983,14 @@ Rigidbody2D:
   m_Constraints: 0
 --- !u!20 &1029524778 stripped
 Camera:
-  m_CorrespondingSourceObject: {fileID: 20859074546019544, guid: 0c15bd4fcba21b54388408a05a5a113a,
+  m_CorrespondingSourceObject: {fileID: 20349392540552378, guid: 0c15bd4fcba21b54388408a05a5a113a,
     type: 2}
-  m_PrefabInternal: {fileID: 1787156165}
+  m_PrefabInternal: {fileID: 1149553541}
 --- !u!4 &1029524779 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a,
+  m_CorrespondingSourceObject: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a,
     type: 2}
-  m_PrefabInternal: {fileID: 1787156165}
+  m_PrefabInternal: {fileID: 1149553541}
 --- !u!1 &1036704088
 GameObject:
   m_ObjectHideFlags: 0
@@ -11113,6 +11113,93 @@ Prefab:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a75e47da08eae754ebeee543744f4240, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1149553541
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114130428800897210, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: PlayerInventory
+      value: 
+      objectReference: {fileID: 1152087631}
+    - target: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 693549613}
+    - target: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: ManaBar
+      value: 
+      objectReference: {fileID: 690359206}
+    - target: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: PlayerHealth
+      value: 
+      objectReference: {fileID: 1234776283}
+    - target: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: PlayerMana
+      value: 
+      objectReference: {fileID: 611665899}
+    - target: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: PlayerArmor
+      value: 
+      objectReference: {fileID: 1534533550}
+    - target: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: NumOfHealthPotions
+      value: 
+      objectReference: {fileID: 442975552}
+    - target: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: NumOfManaPotions
+      value: 
+      objectReference: {fileID: 2020770470}
+    - target: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
+        type: 2}
+      propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 798699288}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1152087631 stripped
 GameObject:
@@ -16081,9 +16168,9 @@ Rigidbody2D:
   m_Constraints: 0
 --- !u!114 &1381441637 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
+  m_CorrespondingSourceObject: {fileID: 114226468154162374, guid: 0c15bd4fcba21b54388408a05a5a113a,
     type: 2}
-  m_PrefabInternal: {fileID: 1787156165}
+  m_PrefabInternal: {fileID: 1149553541}
   m_Script: {fileID: 11500000, guid: 10064461d499ad440b6410ac2f04171f, type: 3}
 --- !u!1001 &1383156260
 Prefab:
@@ -16561,93 +16648,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4181854244839630, guid: a75e47da08eae754ebeee543744f4240,
     type: 2}
   m_PrefabInternal: {fileID: 1123175226}
---- !u!1001 &1787156165
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672119935147722, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114113496561314900, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: PlayerInventory
-      value: 
-      objectReference: {fileID: 1152087631}
-    - target: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: HealthBar
-      value: 
-      objectReference: {fileID: 693549613}
-    - target: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: ManaBar
-      value: 
-      objectReference: {fileID: 690359206}
-    - target: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: PlayerHealth
-      value: 
-      objectReference: {fileID: 1234776283}
-    - target: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: PlayerMana
-      value: 
-      objectReference: {fileID: 611665899}
-    - target: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: PlayerArmor
-      value: 
-      objectReference: {fileID: 1534533550}
-    - target: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: NumOfHealthPotions
-      value: 
-      objectReference: {fileID: 442975552}
-    - target: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: NumOfManaPotions
-      value: 
-      objectReference: {fileID: 2020770470}
-    - target: {fileID: 114593939276709696, guid: 0c15bd4fcba21b54388408a05a5a113a,
-        type: 2}
-      propertyPath: UICanvas
-      value: 
-      objectReference: {fileID: 798699288}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1001 &1808306795
 Prefab:
   m_ObjectHideFlags: 0

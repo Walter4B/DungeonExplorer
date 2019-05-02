@@ -192,7 +192,7 @@ MonoBehaviour:
   Gate: {fileID: 0}
   isMele: 0
   isRanged: 1
-  isBoss: 1
+  isBoss: 0
   isFinalBoss: 1
   _meleAttackIcon: {fileID: 1698797583659554, guid: bc2556047e262f14197bfc7afeeab918,
     type: 2}

@@ -25,6 +25,7 @@ public class FireBall : MonoBehaviour {
         {
             damaged = true;
             Instantiate(_explosion,transform.position,transform.rotation);
+            damage = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().SpellDamage;
             other.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
