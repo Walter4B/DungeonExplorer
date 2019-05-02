@@ -39,7 +39,7 @@ public class MyInventorySlot : Slot
 
         if (InventoryUI.instance == null)
         {
-            Debug.Log("I FOUND YOU");
+            Debug.Log("Error");
         }
         else
             InventoryUI.instance.onItemChangedCallback.Invoke();

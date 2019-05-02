@@ -38,6 +38,6 @@ public class StatsValues : MonoBehaviour
         playerStats.PlayerArmor.text = armourValue.text;
 
         playerStats.SpellDamage = 10 + int.Parse(IntellectValue.text);
-        playerStats.MeleeDamage = 10 + int.Parse(strenghtValue.text) * 2;
+        playerStats.MeleeDamage = 10 + int.Parse(strenghtValue.text);
     }
 }
