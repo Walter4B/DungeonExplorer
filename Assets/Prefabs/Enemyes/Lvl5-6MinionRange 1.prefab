@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 58978162511940928}
   - component: {fileID: 58061927759342664}
   - component: {fileID: 114564174388158276}
+  - component: {fileID: 61013609222756528}
+  - component: {fileID: 61476173153984026}
   m_Layer: 0
   m_Name: Lvl5-6MinionRange 1
   m_TagString: Enemy
@@ -55,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047870874367390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.62, y: 12.11, z: 0}
+  m_LocalPosition: {x: 10.998819, y: 11.1385975, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4598591483636654}
@@ -125,6 +127,56 @@ CircleCollider2D:
   m_Offset: {x: -0.05, y: -0.17}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!61 &61013609222756528
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047870874367390}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.044326305, y: -0.18007565}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.56781864, y: 0.6398487}
+  m_EdgeRadius: 0
+--- !u!61 &61476173153984026
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047870874367390}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.052637577, y: -0.17730522}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7839098, y: 0.8005314}
+  m_EdgeRadius: 0
 --- !u!114 &114466802075812378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,6 +216,7 @@ MonoBehaviour:
   isMele: 0
   isRanged: 1
   isBoss: 1
+  isFinalBoss: 0
   _meleAttackIcon: {fileID: 1188093529857254, guid: 5b898d5c0cd319f4aae54439d87dc590,
     type: 2}
   _rangedAttackIcon: {fileID: 1801886712275702, guid: fb3f52a615dc0ae4596693d835ec656d,

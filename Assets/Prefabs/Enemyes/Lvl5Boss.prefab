@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212982104038586382}
   - component: {fileID: 114436397770728504}
   - component: {fileID: 50704384500968014}
-  - component: {fileID: 58771926319053338}
-  - component: {fileID: 58123744217414236}
   - component: {fileID: 114088470569037252}
+  - component: {fileID: 61343856144936936}
+  - component: {fileID: 61530651536708066}
   m_Layer: 0
   m_Name: Lvl5Boss
   m_TagString: Enemy
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071344225210100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.68257, y: 0.095774174, z: 0.1975619}
+  m_LocalPosition: {x: 15.274414, y: 13.769733, z: 0.1975619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4023305127129568}
@@ -95,8 +95,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58123744217414236
-CircleCollider2D:
+--- !u!61 &61343856144936936
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -107,11 +107,21 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0034546852, y: -0.10363245}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.375, y: 1.875}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
---- !u!58 &58771926319053338
-CircleCollider2D:
+  m_Size: {x: 1.1055555, y: 1.6677351}
+  m_EdgeRadius: 0
+--- !u!61 &61530651536708066
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,9 +132,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0069851875, y: -0.091679096}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.375, y: 1.875}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1.1
+  m_Size: {x: 1.306077, y: 1.8717566}
+  m_EdgeRadius: 0
 --- !u!114 &114088470569037252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +170,7 @@ MonoBehaviour:
   isMele: 1
   isRanged: 1
   isBoss: 1
+  isFinalBoss: 0
   _meleAttackIcon: {fileID: 1698797583659554, guid: bc2556047e262f14197bfc7afeeab918,
     type: 2}
   _rangedAttackIcon: {fileID: 1801886712275702, guid: fb3f52a615dc0ae4596693d835ec656d,

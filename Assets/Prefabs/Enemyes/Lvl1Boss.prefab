@@ -38,9 +38,9 @@ GameObject:
   - component: {fileID: 212464338050798378}
   - component: {fileID: 114768108789105568}
   - component: {fileID: 50244177605431914}
-  - component: {fileID: 58849081302860502}
-  - component: {fileID: 58813063208694410}
   - component: {fileID: 114968090562846658}
+  - component: {fileID: 61978659106256782}
+  - component: {fileID: 70097937812371456}
   m_Layer: 0
   m_Name: Lvl1Boss
   m_TagString: Enemy
@@ -54,8 +54,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1899016161975096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.78, y: 0.15, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.206509, y: 4.887255, z: 0.25390625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4959965789988816}
@@ -95,8 +95,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58813063208694410
-CircleCollider2D:
+--- !u!61 &61978659106256782
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -107,11 +107,21 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00333786, y: -0.03673625}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!58 &58849081302860502
-CircleCollider2D:
+  m_Size: {x: 0.632637, y: 0.9265275}
+  m_EdgeRadius: 0
+--- !u!70 &70097937812371456
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,9 +132,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.6
+  m_Offset: {x: 0, y: -0.043415427}
+  m_Size: {x: 0.8397064, y: 1.2604935}
+  m_Direction: 0
 --- !u!114 &114334885304446678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyProjectilePrefab: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
     type: 2}
-  Health: 100
+  EnemySwingPrefab: {fileID: 0}
+  Health: 80
   Power: 500
   SearchDistance: 20
   _rangeReloadDuration: 2
@@ -173,6 +184,7 @@ MonoBehaviour:
   isMele: 0
   isRanged: 1
   isBoss: 1
+  isFinalBoss: 0
   _meleAttackIcon: {fileID: 1188093529857254, guid: 5b898d5c0cd319f4aae54439d87dc590,
     type: 2}
   _rangedAttackIcon: {fileID: 1302491736875230, guid: a5267785a09e108429faf6e8b7d8cbd6,

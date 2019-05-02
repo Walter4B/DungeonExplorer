@@ -11189,12 +11189,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114218854757519632, guid: a75e47da08eae754ebeee543744f4240,
-        type: 2}
-      propertyPath: _rangedAttackIcon
-      value: 
-      objectReference: {fileID: 1302491736875230, guid: a5267785a09e108429faf6e8b7d8cbd6,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a75e47da08eae754ebeee543744f4240, type: 2}
   m_IsPrefabAsset: 0
@@ -11207,11 +11201,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 75.09
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.48
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 4176064260636276, guid: 0c15bd4fcba21b54388408a05a5a113a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -17026,17 +17020,6 @@ Prefab:
       propertyPath: Gate
       value: 
       objectReference: {fileID: 89129289}
-    - target: {fileID: 114968090562846658, guid: 9f5281ee3f997d24cbb176ad80d798c0,
-        type: 2}
-      propertyPath: Health
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 114968090562846658, guid: 9f5281ee3f997d24cbb176ad80d798c0,
-        type: 2}
-      propertyPath: _rangedAttackIcon
-      value: 
-      objectReference: {fileID: 1302491736875230, guid: a5267785a09e108429faf6e8b7d8cbd6,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5281ee3f997d24cbb176ad80d798c0, type: 2}
   m_IsPrefabAsset: 0

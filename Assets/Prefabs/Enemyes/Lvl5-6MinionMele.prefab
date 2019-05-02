@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212567316619762972}
   - component: {fileID: 114114622591622566}
   - component: {fileID: 50530746523850494}
-  - component: {fileID: 70877691943406182}
-  - component: {fileID: 70011180128888640}
   - component: {fileID: 114542976184574102}
+  - component: {fileID: 61828180217725234}
+  - component: {fileID: 61421282110839198}
   m_Layer: 0
   m_Name: Lvl5-6MinionMele
   m_TagString: Enemy
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1112765440222204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.73, y: 11.49, z: 0}
+  m_LocalPosition: {x: 13.136617, y: 8.014123, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4869909560735996}
@@ -95,8 +95,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &70011180128888640
-CapsuleCollider2D:
+--- !u!61 &61421282110839198
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -107,11 +107,21 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0234375, y: -0.009375572}
-  m_Size: {x: 0.8406296, y: 1.356245}
-  m_Direction: 0
---- !u!70 &70877691943406182
-CapsuleCollider2D:
+  m_Offset: {x: 0.004152775, y: 0.008306026}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7757387, y: 1.1993437}
+  m_EdgeRadius: 0
+--- !u!61 &61828180217725234
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,9 +132,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0234375, y: -0.009375095}
-  m_Size: {x: 0.7093811, y: 1.2437468}
-  m_Direction: 0
+  m_Offset: {x: -0.00000047683716, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5016413, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114114622591622566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -152,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyProjectilePrefab: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
     type: 2}
-  EnemySwingPrefab: {fileID: 1184644095738396, guid: 1569b9e948e543540966965978fe5009,
+  EnemySwingPrefab: {fileID: 1504344479454578, guid: 1569b9e948e543540966965978fe5009,
     type: 2}
   Health: 80
   Power: 400
@@ -164,6 +184,7 @@ MonoBehaviour:
   isMele: 1
   isRanged: 0
   isBoss: 1
+  isFinalBoss: 0
   _meleAttackIcon: {fileID: 1947049737839530, guid: 59e39b16c53408b40b4b367a00468067,
     type: 2}
   _rangedAttackIcon: {fileID: 1302491736875230, guid: a5267785a09e108429faf6e8b7d8cbd6,

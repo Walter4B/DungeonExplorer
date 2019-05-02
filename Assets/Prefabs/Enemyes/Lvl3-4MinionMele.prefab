@@ -38,9 +38,9 @@ GameObject:
   - component: {fileID: 212688032705863300}
   - component: {fileID: 114077857393473470}
   - component: {fileID: 50996731784291954}
-  - component: {fileID: 58094286790511354}
-  - component: {fileID: 58952193552216360}
   - component: {fileID: 114494450525711326}
+  - component: {fileID: 61040399130334034}
+  - component: {fileID: 61518642174258950}
   m_Layer: 0
   m_Name: Lvl3-4MinionMele
   m_TagString: Enemy
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277814864364460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.1, y: 14.14, z: 0}
+  m_LocalPosition: {x: 15.849976, y: 12.084161, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4258202091516436}
@@ -95,23 +95,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58094286790511354
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1277814864364460}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
-  serializedVersion: 2
-  m_Radius: 0.7
---- !u!58 &58952193552216360
-CircleCollider2D:
+--- !u!61 &61040399130334034
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,9 +107,44 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0.0037031174, y: -0.06665516}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Size: {x: 0.75559807, y: 0.8666897}
+  m_EdgeRadius: 0
+--- !u!61 &61518642174258950
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277814864364460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: -0.05184269}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9407511, y: 1.0444374}
+  m_EdgeRadius: 0
 --- !u!114 &114052099510510742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyProjectilePrefab: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
     type: 2}
-  EnemySwingPrefab: {fileID: 1184644095738396, guid: 1569b9e948e543540966965978fe5009,
+  EnemySwingPrefab: {fileID: 1504344479454578, guid: 1569b9e948e543540966965978fe5009,
     type: 2}
   Health: 70
   Power: 400
@@ -175,6 +195,7 @@ MonoBehaviour:
   isMele: 1
   isRanged: 0
   isBoss: 0
+  isFinalBoss: 0
   _meleAttackIcon: {fileID: 1369793549248078, guid: 331376b5e9951c141918503e5e7dd1c9,
     type: 2}
   _rangedAttackIcon: {fileID: 1715687415513502, guid: 4e86e364182c0c24dacaea2ab11711b3,

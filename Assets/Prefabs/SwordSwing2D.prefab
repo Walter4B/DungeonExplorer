@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4760875913659792}
   - component: {fileID: 212935822666433310}
   - component: {fileID: 114697039142948398}
-  - component: {fileID: 61500385600287838}
   - component: {fileID: 114192143037972704}
   - component: {fileID: 82411864625157530}
+  - component: {fileID: 70841282687463286}
   m_Layer: 0
   m_Name: SwordSwing2D
   m_TagString: Weapon
@@ -44,8 +44,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61500385600287838
-BoxCollider2D:
+--- !u!70 &70841282687463286
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -56,19 +56,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.94, y: 0.78}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.01603007, y: -0.076943204}
+  m_Size: {x: 0.9079409, y: 0.8941546}
+  m_Direction: 1
 --- !u!82 &82411864625157530
 AudioSource:
   m_ObjectHideFlags: 1
