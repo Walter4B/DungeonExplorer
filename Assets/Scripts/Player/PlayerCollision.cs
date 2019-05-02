@@ -13,10 +13,10 @@ public class PlayerCollision : MonoBehaviour
             Invoke("SetBoolBackCollide", 2);
         }
     }
-   
-    void OnTriggerEnter2D(Collider2D other)
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.tag == "Enemy" && !isColliding)
+        if (other.collider.tag == "Enemy" && !isColliding)
         {
             isColliding = true;
             GetComponent<PlayerStats>().TakeDamage(5);

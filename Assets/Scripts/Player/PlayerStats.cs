@@ -43,6 +43,7 @@ public class PlayerStats : MonoBehaviour
         HealthBar.value = Health;
         ManaBar.value = Mana;
         inventory = gameObject.GetComponent<InventoryPanel>();
+        Armor = 0;
     }
 
     private void Start()
