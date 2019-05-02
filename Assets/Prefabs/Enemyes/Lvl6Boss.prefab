@@ -182,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyProjectilePrefab: {fileID: 1425385240766502, guid: 1d4a60898455e9144a2cb354ce298b86,
     type: 2}
+  EnemySwingPrefab: {fileID: 0}
   Health: 200
   Power: 400
   SearchDistance: 20
@@ -192,6 +193,7 @@ MonoBehaviour:
   isMele: 0
   isRanged: 1
   isBoss: 1
+  isFinalBoss: 1
   _meleAttackIcon: {fileID: 1698797583659554, guid: bc2556047e262f14197bfc7afeeab918,
     type: 2}
   _rangedAttackIcon: {fileID: 1452313976657786, guid: 9e09971831642ec459299e99bc5aa12e,

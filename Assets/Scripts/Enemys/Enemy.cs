@@ -36,6 +36,8 @@ public class Enemy : MonoBehaviour
     private bool isRanged = true;
     [SerializeField]
     private bool isBoss = false;
+    [SerializeField]
+    private bool isFinalBoss = false;
 
     [SerializeField]
     private GameObject _meleAttackIcon;
@@ -76,6 +78,12 @@ public class Enemy : MonoBehaviour
             if(isBoss)
             {
                 Destroy(Gate);
+            }
+            if(isFinalBoss)
+            {
+                DestroyAll();
+                Cursor.visible = true;
+                SceneManager.LoadScene(7);
             }
             Destroy(gameObject);
         }
@@ -156,6 +164,13 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Health -= damage;
-        Debug.Log(damage);
+    }
+    
+    private void DestroyAll()
+    {
+        foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
+        {
+            Destroy(o);
+        }
     }
 }
