@@ -26,6 +26,11 @@ public class ChestSlot : Slot
 
     public void AddItemToInvetory()
     {
+        if (playerItems == null)
+        {
+            this.Awake();
+        }
+
         var slotToAddTo = playerItems.gameObject.GetComponentsInChildren<MyInventorySlot>()[Armour.GetSlotIndex(item.ArmourSlot)];
         ArmourPiece itemBackup = slotToAddTo.GetArmourPiece();
 
