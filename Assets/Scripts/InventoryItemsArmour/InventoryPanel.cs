@@ -18,7 +18,7 @@ public class InventoryPanel : MonoBehaviour
     {
         statsValues = PlayerInventory.GetComponentInChildren<StatsValues>();
         slots = PlayerInventory.GetComponentsInChildren<MyInventorySlot>();
-        PlayerInventory.SetActive(true);
+        PlayerInventory.SetActive(false);
     }
 
     private void Start()
