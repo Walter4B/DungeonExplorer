@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 114226468154162374}
   - component: {fileID: 114550009483172520}
   - component: {fileID: 114298470871986314}
-  - component: {fileID: 114077631735761338}
   - component: {fileID: 114130428800897210}
   - component: {fileID: 61950632434062318}
   - component: {fileID: 61582109553510432}
+  - component: {fileID: 114676470888721380}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -259,17 +259,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1877016324110368}
   m_Enabled: 1
---- !u!114 &114077631735761338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1386053074208984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3642d5e958ce7ef4fa9651d27fd0c880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114130428800897210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   Mana: 100
-  Armor: 1
+  Armor: 0
   HealthPotions: 0
   ManaPotions: 0
   SpellDamage: 10
@@ -356,6 +345,17 @@ MonoBehaviour:
   ThisScene: 0
   Power: 500
   SwingPower: 1
+--- !u!114 &114676470888721380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386053074208984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3642d5e958ce7ef4fa9651d27fd0c880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114678228786725314
 MonoBehaviour:
   m_ObjectHideFlags: 1
