@@ -24,17 +24,22 @@ public class ArmourPiece : ScriptableObject
         {
             armourType = Armour.ArmourType.Cloth;
         }
-        else if ((float) value / (int)slotName < 0.25)
+        else
         {
-            armourType = Armour.ArmourType.Light;
-        }
-        else if ((float)value / (int)slotName < 0.75)
-        {
-            armourType = Armour.ArmourType.Medium;
-        }
-        else if ((float)value / (int)slotName < 1)
-        {
-            armourType = Armour.ArmourType.Heavy;
+            var slotArmourValue = Armour.GetArmourValue(slotName);
+
+            if ((float)value / slotArmourValue < 0.25)
+            {
+                armourType = Armour.ArmourType.Light;
+            }
+            else if ((float)value / slotArmourValue < 0.75)
+            {
+                armourType = Armour.ArmourType.Medium;
+            }
+            else if ((float)value / slotArmourValue < 1)
+            {
+                armourType = Armour.ArmourType.Heavy;
+            }
         }
 
         Strength = RandomNumberGenerator.GetRandom(5);
