@@ -16723,6 +16723,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1726209910479740, guid: b2a4e594f654fa147812e5e29215edb9, type: 2}
+      propertyPath: m_TagString
+      value: InventoryCanvas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a4e594f654fa147812e5e29215edb9, type: 2}
   m_IsPrefabAsset: 0

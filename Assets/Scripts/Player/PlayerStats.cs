@@ -60,6 +60,7 @@ public class PlayerStats : MonoBehaviour
         if(currentHealth <= 0)
         {
             SceneManager.LoadScene(1);
+            Destroy(GameObject.FindGameObjectWithTag("InventoryCanvas"));
             Destroy(UICanvas);
             Destroy(gameObject);
         }

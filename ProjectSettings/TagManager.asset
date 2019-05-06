@@ -16,6 +16,7 @@ TagManager:
   - Chest
   - CharacterInventory
   - PlayerCollider
+  - InventoryCanvas
   layers:
   - Default
   - TransparentFX
