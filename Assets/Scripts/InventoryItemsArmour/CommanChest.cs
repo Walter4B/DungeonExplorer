@@ -1,23 +1,20 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using System.Collections.Generic;
+using TMPro;
 using System.Linq;
 
 public class CommanChest : MonoBehaviour
 {
- //   [SerializeField]
     private Transform parentCanvasTransform;
-  //  [SerializeField]
     private GameObject chestPanel;
-  //  [SerializeField]
     private Transform Player;
-   // [SerializeField]
     private GameObject characterPanel;
 
-    private SpriteRenderer spriteRenderer;
-
+    private SpriteRenderer activeSprite;
     private Sprite closedChest;
+
+    [SerializeField]
+    private GameObject pressF;
 
     [SerializeField]
     private Sprite fullChest;
@@ -34,16 +31,16 @@ public class CommanChest : MonoBehaviour
             {
                 if (slots.Count(slot => slot != null) == 0 && potion == null)
                 {
-                    spriteRenderer.sprite = emptyChest;
+                    activeSprite.sprite = emptyChest;
                 }
                 else
                 {
-                    spriteRenderer.sprite = fullChest;
+                    activeSprite.sprite = fullChest;
                 }
             }
             else
             {
-                spriteRenderer.sprite = closedChest;
+                activeSprite.sprite = closedChest;
             }
         }
     }
@@ -57,9 +54,9 @@ public class CommanChest : MonoBehaviour
 
     private void Awake()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        activeSprite = gameObject.GetComponent<SpriteRenderer>();
         parentCanvasTransform = GameObject.Find("InventoryCanvas").transform;
-        closedChest = spriteRenderer.sprite;
+        closedChest = activeSprite.sprite;
 
         if (gameObject.name.Contains("Comman"))
         {
@@ -73,15 +70,7 @@ public class CommanChest : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         characterPanel = parentCanvasTransform.Find("CharacterPanel").gameObject;
 
-        var canvas = chestPanel.GetComponent<Canvas>();
-
-        canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        canvas.sortingLayerID = parentCanvasTransform.GetComponent<Canvas>().sortingLayerID;
-        canvas.sortingOrder = 5;
-
-        canvas.GetComponent<RectTransform>().anchoredPosition = new Vector2(10,0);
-
+        InitializePanelCanvas();
 
         chestPanel.SetActive(false);
         slots = chestPanel.GetComponentsInChildren<ChestSlot>();
@@ -107,8 +96,19 @@ public class CommanChest : MonoBehaviour
         UpdateChest();
     }
 
+    private void InitializePanelCanvas()
+    {
+        var canvas = chestPanel.GetComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        canvas.sortingLayerID = parentCanvasTransform.GetComponent<Canvas>().sortingLayerID;
+        canvas.sortingOrder = 5;
+        canvas.GetComponent<RectTransform>().anchoredPosition = new Vector2(10, 0);
+    }
+
     private void UpdateChest()
     {
+        pressF.SetActive(playerInRange);
         if (playerInRange && Input.GetKeyDown(KeyCode.F))
         {
             if (!chestPanel.activeSelf)
