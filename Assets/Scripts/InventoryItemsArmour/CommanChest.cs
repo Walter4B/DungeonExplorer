@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using System.Linq;
 
 public class CommanChest : MonoBehaviour
 {
@@ -14,15 +15,51 @@ public class CommanChest : MonoBehaviour
    // [SerializeField]
     private GameObject characterPanel;
 
+    private SpriteRenderer spriteRenderer;
+
+    private Sprite closedChest;
+
+    [SerializeField]
+    private Sprite fullChest;
+    [SerializeField]
+    private Sprite emptyChest;
+
+    private bool ChestActive
+    {
+        set
+        {
+            chestPanel.SetActive(value);
+
+            if (value)
+            {
+                if (slots.Count(slot => slot != null) == 0 && potion == null)
+                {
+                    spriteRenderer.sprite = emptyChest;
+                }
+                else
+                {
+                    spriteRenderer.sprite = fullChest;
+                }
+            }
+            else
+            {
+                spriteRenderer.sprite = closedChest;
+            }
+        }
+    }
+
     private readonly float radius = 2.5f;
     private float distance;
-    private enum Clickable { ChestClicked, ChestNotClicked, DidntClick }
-
     private ChestSlot[] slots;
+    private Potion potion;
+
+    private bool playerInRange = false;
 
     private void Awake()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         parentCanvasTransform = GameObject.Find("InventoryCanvas").transform;
+        closedChest = spriteRenderer.sprite;
 
         if (gameObject.name.Contains("Comman"))
         {
@@ -54,7 +91,8 @@ public class CommanChest : MonoBehaviour
             item.AddItem();
         }
 
-        chestPanel.GetComponentInChildren<Potion>().Init();
+        potion = chestPanel.GetComponentInChildren<Potion>();
+        potion.Init();
     }
 
     private void Update()
@@ -65,40 +103,27 @@ public class CommanChest : MonoBehaviour
         }
 
         distance = Vector2.Distance(Player.position, transform.position);
-
-        if (distance < radius && CheckIfClicked() == Clickable.ChestClicked)
-        {
-            chestPanel.SetActive(!chestPanel.activeSelf);
-        }
-
-        if (chestPanel.activeSelf && (distance > radius || CheckIfClicked() == Clickable.ChestNotClicked))
-        {
-            chestPanel.SetActive(false);
-        }
+        playerInRange = distance < radius;
+        UpdateChest();
     }
 
-
-    private Clickable CheckIfClicked()
+    private void UpdateChest()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (playerInRange && Input.GetKeyDown(KeyCode.F))
         {
-            Collider2D hitCollider = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-
-            if (hitCollider != null && hitCollider.CompareTag("Chest"))
+            if (!chestPanel.activeSelf)
             {
-                if (!chestPanel.activeSelf)
-                {
-                    characterPanel.SetActive(true);
-                }
-
-                return Clickable.ChestClicked;
+                characterPanel.SetActive(true);
+                ChestActive = true;
             }
             else
             {
-                return Clickable.ChestNotClicked;
+                ChestActive = false;
             }
         }
-
-        return Clickable.DidntClick;
+        else if (!playerInRange && chestPanel.activeSelf)
+        {
+            ChestActive = false;
+        }
     }
 }
