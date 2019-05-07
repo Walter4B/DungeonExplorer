@@ -160,6 +160,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dc35ec50f1ed694f80027edfc2a407a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &20763398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1250466082794104, guid: 8dc35ec50f1ed694f80027edfc2a407a,
+    type: 2}
+  m_PrefabInternal: {fileID: 20763397}
+--- !u!61 &20763399
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20763398}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &89129289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1268624209929690, guid: bf0b32cc9ba874b408fc8332dbb11459,
@@ -11115,6 +11145,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac062b3f1ec2f04b8dc381d8f8dd609, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &924079608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1503597216458408, guid: aac062b3f1ec2f04b8dc381d8f8dd609,
+    type: 2}
+  m_PrefabInternal: {fileID: 924079607}
+--- !u!61 &924079609
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 924079608}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!20 &1029524778 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20349392540552378, guid: 0c15bd4fcba21b54388408a05a5a113a,
@@ -16924,7 +16984,7 @@ GameObject:
   - component: {fileID: 1804724159}
   - component: {fileID: 1804724158}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: CaptionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
