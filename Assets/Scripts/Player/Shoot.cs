@@ -29,7 +29,7 @@ public class Shoot : MonoBehaviour
         ParentInstantiate();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         ThisScene = SceneManager.GetActiveScene().buildIndex;
         if (!PauseMenu.GameIsPaused)
