@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d63985010742d84fb478aa01e5d3867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyProjectilePrefab: {fileID: 1745431409912628, guid: 00932717feb0f6e4c8c4d5a5960350fc,
+  EnemyProjectilePrefab: {fileID: 1255769719806406, guid: f34a804becda3864f8a73d5aeda8cd9e,
     type: 2}
   EnemySwingPrefab: {fileID: 1184644095738396, guid: 1569b9e948e543540966965978fe5009,
     type: 2}

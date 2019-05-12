@@ -163,7 +163,7 @@ MonoBehaviour:
     type: 2}
   EnemySwingPrefab: {fileID: 1413688285698736, guid: 445529a657828c247a705ac559d6279e,
     type: 2}
-  Health: 50
+  Health: 130
   Power: 500
   SearchDistance: 20
   _rangeReloadDuration: 2
