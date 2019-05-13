@@ -16471,6 +16471,21 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114731584976743448, guid: f846f6ae71a0ca049927d2e842fbedca,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114731584976743448, guid: f846f6ae71a0ca049927d2e842fbedca,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 114731584976743448, guid: f846f6ae71a0ca049927d2e842fbedca,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 760
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f846f6ae71a0ca049927d2e842fbedca, type: 2}
   m_IsPrefabAsset: 0
@@ -16612,6 +16627,21 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -18.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114306774098674262, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114306774098674262, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 114306774098674262, guid: b2a4e594f654fa147812e5e29215edb9,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 760
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a4e594f654fa147812e5e29215edb9, type: 2}
