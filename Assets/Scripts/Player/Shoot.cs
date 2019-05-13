@@ -46,7 +46,7 @@ public class Shoot : MonoBehaviour
                 Invoke("SetBoolBack", 1);
             }
 
-            if (Input.GetButtonDown("Fire2") && !Attacking && ManaCost.currentMana >= 10)
+            if (Input.GetButtonDown("Fire2") && !Attacking && ManaCost.CurrentMana >= 10)
             {
                 Shooting();
                 Attacking = true;

@@ -54,6 +54,14 @@ public class CommanChest : MonoBehaviour
 
     private void Awake()
     {
+        InitializeComponents();
+        InitializePanelCanvas();
+        GenerateChestItems();
+    }
+
+    #region Initialization
+    private void InitializeComponents()
+    {
         activeSprite = gameObject.GetComponent<SpriteRenderer>();
         parentCanvasTransform = GameObject.Find("InventoryCanvas").transform;
         closedChest = activeSprite.sprite;
@@ -69,9 +77,20 @@ public class CommanChest : MonoBehaviour
 
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         characterPanel = parentCanvasTransform.Find("CharacterPanel").gameObject;
+    }
 
-        InitializePanelCanvas();
+    private void InitializePanelCanvas()
+    {
+        var canvas = chestPanel.GetComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        canvas.sortingLayerID = parentCanvasTransform.GetComponent<Canvas>().sortingLayerID;
+        canvas.sortingOrder = 5;
+        canvas.GetComponent<RectTransform>().anchoredPosition = new Vector2(10, 0);
+    }
 
+    private void GenerateChestItems()
+    {
         chestPanel.SetActive(false);
         slots = chestPanel.GetComponentsInChildren<ChestSlot>();
 
@@ -83,6 +102,7 @@ public class CommanChest : MonoBehaviour
         potion = chestPanel.GetComponentInChildren<Potion>();
         potion.Init();
     }
+    #endregion
 
     private void Update()
     {
@@ -94,16 +114,6 @@ public class CommanChest : MonoBehaviour
         distance = Vector2.Distance(Player.position, transform.position);
         playerInRange = distance < radius;
         UpdateChest();
-    }
-
-    private void InitializePanelCanvas()
-    {
-        var canvas = chestPanel.GetComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        canvas.sortingLayerID = parentCanvasTransform.GetComponent<Canvas>().sortingLayerID;
-        canvas.sortingOrder = 5;
-        canvas.GetComponent<RectTransform>().anchoredPosition = new Vector2(10, 0);
     }
 
     private void UpdateChest()

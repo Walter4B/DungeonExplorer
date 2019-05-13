@@ -32,7 +32,24 @@ public class PlayerStats : MonoBehaviour
     public GameObject UICanvas;
 
     private int currentHealth;
-    public int currentMana;
+
+    private int currentMana;
+    public int CurrentMana
+    {
+        get
+        {
+            return currentMana;
+        }
+        set
+        {
+            currentMana = value;
+
+            if (currentMana < 0)
+            {
+                currentMana = 0;
+            }
+        }
+    }
 
     private InventoryPanel inventory;
 
@@ -42,7 +59,7 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         currentHealth = Health;
-        currentMana = Mana;
+        CurrentMana = Mana;
         HealthBar.value = Health;
         ManaBar.value = Mana;
         inventory = gameObject.GetComponent<InventoryPanel>();
@@ -51,7 +68,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Start()
     {
-        PlayerMana.text = currentMana + "/" + Mana;
+        PlayerMana.text = CurrentMana + "/" + Mana;
         UpdatePotions();
     }
 
@@ -105,8 +122,8 @@ public class PlayerStats : MonoBehaviour
 
     public void CastSpell()
     {
-        currentMana -= 10;
-        PlayerMana.text = currentMana.ToString();
+        CurrentMana -= 10;
+        PlayerMana.text = CurrentMana.ToString();
         UpdatePlayerMana();
     }
 
@@ -124,9 +141,9 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdatePlayerMana(int manaToAdd = 0)
     {
-        currentMana = currentMana + manaToAdd > Mana ? Mana : currentMana + manaToAdd;
-        ManaBar.value = currentMana;
-        PlayerMana.text = currentMana + "/" + Mana;
+        CurrentMana = CurrentMana + manaToAdd > Mana ? Mana : CurrentMana + manaToAdd;
+        ManaBar.value = CurrentMana;
+        PlayerMana.text = CurrentMana + "/" + Mana;
     }
 
     private int GetDamage(int damage)

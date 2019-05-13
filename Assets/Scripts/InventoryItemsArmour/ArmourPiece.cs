@@ -42,9 +42,9 @@ public class ArmourPiece : ScriptableObject
             }
         }
 
-        Strength = RandomNumberGenerator.GetRandom(5);
-        Intellect = RandomNumberGenerator.GetRandom(5);
-        Stamina = RandomNumberGenerator.GetRandom(5);
+        Strength = RandomNumberGenerator.GetRandom(6);
+        Intellect = RandomNumberGenerator.GetRandom(6);
+        Stamina = RandomNumberGenerator.GetRandom(6);
 
         var attributesSum = Strength + Intellect + Stamina;
 
