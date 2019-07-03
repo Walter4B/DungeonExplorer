@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4342845685954752}
   - component: {fileID: 212901912738315422}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: 0x72_16x16DungeonTileset_walls.v2_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4653600417981516}
   - component: {fileID: 61831961428875638}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Gate
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4043553435807378}
   - component: {fileID: 212518463068216152}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: 0x72_16x16DungeonTileset_walls.v2_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4435416935776458}
   - component: {fileID: 212308648912004430}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: 0x72_16x16DungeonTileset_walls.v2_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4035134436249702}
   - component: {fileID: 212701799801308216}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: 0x72_16x16DungeonTileset_walls.v2_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268624209929690}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 67.98, y: -0.51, z: 0.120755084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

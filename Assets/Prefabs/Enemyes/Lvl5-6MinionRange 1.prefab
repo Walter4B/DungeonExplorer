@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114564174388158276}
   - component: {fileID: 61013609222756528}
   - component: {fileID: 61476173153984026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lvl5-6MinionRange 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047870874367390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.34311, y: -29.115616, z: 0.1975619}
+  m_LocalPosition: {x: 60.04865, y: 20.845541, z: 0.1975619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4598591483636654}
@@ -107,7 +107,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.033812523, y: -0.19059181}
+  m_Offset: {x: -0.033812523, y: -0.31702995}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -118,7 +118,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43744087, y: 0.5010567}
+  m_Size: {x: 0.43744087, y: 0.24818039}
   m_EdgeRadius: 0
 --- !u!61 &61476173153984026
 BoxCollider2D:
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02950573, y: -0.18571663}
+  m_Offset: {x: -0.02950573, y: -0.31215477}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -143,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.56100273, y: 0.63230515}
+  m_Size: {x: 0.56100273, y: 0.37942886}
   m_EdgeRadius: 0
 --- !u!114 &114466802075812378
 MonoBehaviour:

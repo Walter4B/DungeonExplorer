@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114774960176732944}
   - component: {fileID: 82091494763904196}
   - component: {fileID: 58880531365176286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySwordSwing2D
   m_TagString: Weapon
   m_Icon: {fileID: 0}

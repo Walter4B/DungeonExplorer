@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114290681448618464}
   - component: {fileID: 82771738369726868}
   - component: {fileID: 70198826189769612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossSwordSwing2D
   m_TagString: Weapon
   m_Icon: {fileID: 0}

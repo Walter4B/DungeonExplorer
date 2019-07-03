@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114088470569037252}
   - component: {fileID: 61343856144936936}
   - component: {fileID: 61530651536708066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lvl5Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071344225210100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5733032, y: 6.175789, z: 0.1975619}
+  m_LocalPosition: {x: 58.61427, y: 18.381351, z: 0.1975619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4023305127129568}
@@ -107,7 +107,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0008468628, y: -0.08538675}
+  m_Offset: {x: -0.0008468628, y: -0.5356369}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -118,7 +118,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0065079, y: 1.568686}
+  m_Size: {x: 1.0065079, y: 0.6930275}
   m_EdgeRadius: 0
 --- !u!61 &61530651536708066
 BoxCollider2D:
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004377365, y: -0.089072466}
+  m_Offset: {x: -0.004377365, y: -0.5331118}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -143,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1340446, y: 1.7101502}
+  m_Size: {x: 1.1340446, y: 0.82207155}
   m_EdgeRadius: 0
 --- !u!114 &114088470569037252
 MonoBehaviour:

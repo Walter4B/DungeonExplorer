@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224382657865036126}
   - component: {fileID: 222991379732609948}
   - component: {fileID: 114885385529459048}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: StaminaLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 224598580992978246}
   - component: {fileID: 222664274983617610}
   - component: {fileID: 114944624293714758}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Press F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 224748426330987930}
   - component: {fileID: 222330034994027508}
   - component: {fileID: 223394734813399576}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: CaptionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 224698040791601076}
   - component: {fileID: 222129673321742374}
   - component: {fileID: 114425168578020944}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: TextMeshPro Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 224109163459709850}
   - component: {fileID: 222467309434169210}
   - component: {fileID: 114317724210143012}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: StrenghtLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 224531213684634778}
   - component: {fileID: 222161039800780584}
   - component: {fileID: 114892550783241296}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: IntellectLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 222237265088364936}
   - component: {fileID: 114434807776624102}
   - component: {fileID: 114590947607298746}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: PotionSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 224783971910434914}
   - component: {fileID: 222441064677407066}
   - component: {fileID: 114219135278570902}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: IntellectValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 224288506608692598}
   - component: {fileID: 222979716172357170}
   - component: {fileID: 114626116430709424}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 222046318287566462}
   - component: {fileID: 114931817666797692}
   - component: {fileID: 114296409795132946}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 50853322442849088}
   - component: {fileID: 114279460910755318}
   - component: {fileID: 61957833528819592}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CommanChest
   m_TagString: Chest
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 114042339929414356}
   - component: {fileID: 114886264536273272}
   - component: {fileID: 114121135722202576}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ChestSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 224443140912801622}
   - component: {fileID: 222380968118446420}
   - component: {fileID: 114230144060738902}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: StaminaValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 224947556816660700}
   - component: {fileID: 222244210251063060}
   - component: {fileID: 114206571241401450}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: TextMeshPro Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 224241921028991486}
   - component: {fileID: 222448801640552790}
   - component: {fileID: 114731661018426716}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ArmourLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 224845182131885972}
   - component: {fileID: 222161494549698494}
   - component: {fileID: 114133635521794128}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ArmourValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 224218935871417826}
   - component: {fileID: 222490441792101308}
   - component: {fileID: 114994109247897454}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 224095580191887044}
   - component: {fileID: 222494614317255374}
   - component: {fileID: 114291413082767706}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 223977205816626802}
   - component: {fileID: 114620426086523404}
   - component: {fileID: 114710937876513252}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: CommanChestPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 224333465597265890}
   - component: {fileID: 222445404173391312}
   - component: {fileID: 114351381905954950}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 224944894790760870}
   - component: {fileID: 222613572478609196}
   - component: {fileID: 114138380908333796}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: StrenghtValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 222510364757905594}
   - component: {fileID: 114993187646112066}
   - component: {fileID: 114080760048314346}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ChestLayer
   m_TagString: ChestLayer
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 222860653213628750}
   - component: {fileID: 114541379688615570}
   - component: {fileID: 114720319230011124}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: AddButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 224214399474932606}
   - component: {fileID: 222943931118314494}
   - component: {fileID: 114860443895349194}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 224406952188530286}
   - component: {fileID: 222938008262865416}
   - component: {fileID: 114973805190892092}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ItemName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 222833366754417610}
   - component: {fileID: 114318782934524330}
   - component: {fileID: 114032271610276676}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: AddButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1503597216458408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.3, y: 13.93, z: 0}
+  m_LocalPosition: {x: -5.5339355, y: -22.232758, z: 0.19140625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224758929595126300}
@@ -2663,8 +2663,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1169769555
-  m_SortingLayer: 4
+  m_SortingLayerID: 203473297
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300300, guid: d309130f0bf200e42bb2b674d62ec567, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 58096414568109244}
   - component: {fileID: 114273240464371074}
   - component: {fileID: 114111923693792792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lvl4Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619611174605626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.653656, y: -4.653282, z: 0.12890625}
+  m_LocalPosition: {x: 54.605408, y: 14.99774, z: 0.12890625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4546675636427302}
@@ -108,7 +108,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0071144104, y: -0.08530903}
+  m_Offset: {x: 0.0071144104, y: -0.485309}
   serializedVersion: 2
   m_Radius: 0.56889725
 --- !u!58 &58631659702475932
@@ -123,7 +123,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.020900726, y: -0.08099604}
+  m_Offset: {x: 0.020900726, y: -0.4809961}
   serializedVersion: 2
   m_Radius: 0.69441605
 --- !u!114 &114111923693792792
