@@ -16,3 +16,6 @@ Notable:
 
 Build of the game:
 https://walter4.itch.io/dungeon-explorer
+
+Special thanks to [Tomislav Podunajec](https://github.com/krompac) for collaboration.
+
